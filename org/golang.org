@@ -1,4 +1,6 @@
 #+STARTUP: content
+#+OPTIONS: \n:t
+#+OPTIONS: ^:{}
 #+hugo_base_dir: ../
 #+hugo_section: ./posts
 
@@ -28,3 +30,174 @@ You can find a lot of reasons why people are using Golang. And here is my list.
 #+BEGIN_QUOTE
 Imagine you are having not one, but a couple of yodas in computer science to work on the same language.
 #+END_QUOTE
+
++ **Robert Griesemer** - V8 JavaScript engine, Java HotSpot virtual machine
++ **Rob Commander Pike** - Co-creator of UTF-8, Plan 9 from Bell Labs
++ **Ken Thompson** - Designed original Unix system, Invented direct predecessor to C language, Co-creator of UTF-8
+
+I am not saying nothing could go wrong with this team, but this is good enough for me to check the language out.
+
+
+
+*** Purpose of the Project
+#+BEGIN_QUOTE
+Go was designed to address the problems faced in large scale software development, with concurrency
+and maintainability built in its core.
+#+END_QUOTE
+
+When Go launched, some claimed it was missing particular features or methodologies that were regarded as de rigueur for a modern language. \\
+
+How could Go be worthwhile in the absence of these facilities? Our answer to that is that the properties Go does have address the issues that make large-scale software development difficult. These issues include: \\
+
+- slow builds
+- uncontrolled dependencies
+- each programmer using a different subset of the language
+- poor program understanding (code hard to read, poorly documented, and so on)
+- duplicate of effort
+- cost of updates
+- version skew
+- difficulty of writing automatic tools
+- cross-language builds
+
+Individual features of a language don't address these issues. A larger view of software engineering is required, and in the design of Go we tried to focus on solutions to these problems.
+
+Reference: [[https://golang.org/doc/faq#What_is_the_purpose_of_the_project][Go Frequently Asked Questions]]
+
+
+*** Gopher
+#+BEGIN_QUOTE
+Gopher is the best representation of the language imo.
+It's simple, it's fun. It helps me solve complex problems with simple solutions.
+#+END_QUOTE
+
+#+attr_html: :width 250px
+#+attr_latex: :width 250px
+[[https://storage.googleapis.com/billylkc-blog-image/images/posts/why-go-gopher.jpg]]
+
+
+
+*** Developer Productivity
+#+BEGIN_QUOTE
+Having the expressiveness of dynamic languages, with the performance of compiled languages.
+#+END_QUOTE
+
+Golang is fast. And it is not just about the performance and compilation time. It also provides all kinds of features and tools for the developers to be more productive.
+
+
+Here are some reasons that I think Golang stands out in terms of developers' productivity.
+
+**** a) Public vs Private function
+Does it bothers you when you first started learning Java with public static void without really knowing what it means?
+
+Instead of using a =public/private= keyword, Go uses initial letter of the identifier to determine the visibility.
+
+- **upper case initial letter**: Name is visible to clients of package
+- **otherwise**: name (or _Name) is not visible to clients of package
+
+#+begin_src go :imports "fmt"
+  package hello
+
+  import "fmt"
+
+  // hello as some private function
+  // Not visible outside of the package
+  func hello() {
+      fmt.Println("I am a private function")
+  }
+
+  // SayHello is a public function
+  // As the func name is starting with Capital letter
+  func SayHello() {
+      fmt.Println("I am a public function")
+  }
+#+end_src
+
+**** b) Documentation
+You can generate a package documentation in the command line with src_sh[:exports code]{go doc --all}
+
+#+ATTR_HTML: :style border:2px solid #ccc;
+[[https://storage.googleapis.com/billylkc-blog-image/images/posts/why-go-go-doc.png]]
+
+or html format with ~godoc -http=localhost:7000~
+
+#+ATTR_HTML: :style border:2px solid black;
+[[https://storage.googleapis.com/billylkc-blog-image/images/posts/why-go-go-doc-2.png]]
+
+**** c) go fmt
+#+BEGIN_QUOTE
+Gofmt's style is no one's favorite, yet gofmt is everyone's favorite.
+
+-Rob Pike
+#+END_QUOTE
+
+With Go, it takes an unusual approach and let the machine take care of the most controversial formatting issues.
+
+Less time can be spent on the discussion on whether 2 spaces or 4 spaces or tab or vertical comments alignment should be used. It also makes you feel 'consistent' to read code written by others.
+
+_Auto formatting on save with go fmt_
+[[https://storage.googleapis.com/billylkc-blog-image/images/posts/why-go-go-fmt.gif]]
+
+**** d) Compiled Language
+
+Because Go compiles so fast, it gives you the benefit of a compiled language (type checking, efficiency, etc..) and makes you feel like writing in an interpreted language as well.
+
+Here is an example of how you can be benefit from a compiler (Easier to detect error and restructure code, etc..).
+
+Function Signature checking
+[[https://storage.googleapis.com/billylkc-blog-image/images/posts/why-go-compile.gif]]
+
+
+*** Companies using Golang
+#+BEGIN_QUOTE
+Why Golang? It is battle tested.
+#+END_QUOTE
+
+Many big companies are using Go programming language in various projects and services due to its scalability, superior error check, and concurrency. Here are some big companies which are using Golang:
+
+- Google
+- Uber
+- Netflix
+- Alibaba
+- Twitch
+- Dropbox
+- Medium
+- SoundCloud
+
+
+Reference: [[https://github.com/golang/go/wiki/GoUsers][Companies using Go]]
+
+*** Developer Survey
+
+In February 2020 StackOverflow condcted a survey with nearly 65,000 developers on how they learn and level up, which tools they’re using, and what they want. Here are some take aways on Golang.
+
+
+
+- In terms of Median Salary versus Experience. Golang programers are doing AOkay. (Possible bias of the big pay-roll in larger companies though)
+  #+CAPTION: Stackoverflow survey - Golang
+  [[https://storage.googleapis.com/billylkc-blog-image/images/posts/why-go-survey-1.png]]
+  {Remarks: The survey was taken in February 2020, before COVID-19 was declared a pandemic by the World Health Organization and before the virus impacted every country in the world.}
+
+- For the most loved language, we see a big gain in Go, moving up to 5th (2020) from 10th (2019).
+  [[https://storage.googleapis.com/billylkc-blog-image/images/posts/why-go-survey-2.png]]
+
+
+- And for the most dreaded language, Go is amongst the last few, which is always a good sign.
+  [[https://storage.googleapis.com/billylkc-blog-image/images/posts/why-go-survey-3.png]]
+
+
+Reference: [[https://insights.stackoverflow.com/survey/2020][2020 Stack Overflow Developer Survey]]
+
+*** What about Data science
+#+BEGIN_QUOTE
+Nothing. Who says everything is about DS.
+#+END_QUOTE
+
+Just kidding 🙂. The truth is data science will not be the main focus of Go in near future. It is being more widely used in areas like, DevOps, Cloud architecture, web development, API/RPC services, etc..
+
+
+I do find Go very easy to use for data scraping and hosting API.
+
+
+
+*** Final Thoughts
+Some final thoughts
