@@ -1,0 +1,55 @@
+baseURL = "http://billylkc.com/dev/"
+languageCode = "en-us"
+title = "Another Data Science Blog"
+theme = "dream"
+defaultContentLanguage = "en"
+headerTitle = "Another Data Science Blog"
+googleAnalytics = "260697059"
+
+
+[params]
+  background = "#fff"
+  backgroundImage = "https://storage.googleapis.com/billylkc-blog-image/images/background_3.jpg"
+  linkColor = "seagreen"
+
+  # dark mode
+  # defaultDark = true
+  backgroundDark = "black"
+  # backgroundImageDark = "/me/background-dark.jpg"
+  darkLinkColor = "darkseagreen"
+
+  avatar = "https://storage.googleapis.com/billylkc-blog-image/images/avatar_gopher.jpg"
+  description = "Another Data Science Blog"
+  AuthorName = "Billy Lam"
+  GitHubUser = "billylkc"
+  Subtitle = "Hugo is Absurdly Fast!"
+  headerTitle = "Another Data Science Blog"
+  motto = "The boring side of Data Science"
+  email = "billy.lamkc@gmail.com"
+  twitter = "billylkc"
+  linkedin = "billylkc"
+  github = "billylkc"
+  siteStartYear = 2021
+
+  highlightjs = true
+  highlightjsCDN = "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"
+  highlightjsExtraLanguages = ["ocaml"]
+  highlightjsTheme = "gruvbox-light"
+  highlightjsThemeDark = "gruvbox-dark"
+
+  # search
+  enableSearch = true
+
+  # options
+  showSummaryCoverInPost = true
+  hasTwitterEmbed = false
+  reversePostAndAside = true
+  shareInAside = false
+  fixedNav = false
+
+[permalinks]
+  posts = "/:2006/:01/:02/:slug/"
+
+# in your config.toml
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
