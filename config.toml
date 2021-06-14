@@ -13,7 +13,7 @@ googleAnalytics = "260697059"
   linkColor = "seagreen"
 
   # dark mode
-  # defaultDark = true
+  defaultDark = true
   backgroundDark = "black"
   # backgroundImageDark = "/me/background-dark.jpg"
   darkLinkColor = "darkseagreen"
@@ -24,7 +24,7 @@ googleAnalytics = "260697059"
   GitHubUser = "billylkc"
   Subtitle = "Hugo is Absurdly Fast!"
   headerTitle = "Another Data Science Blog"
-  motto = "The boring side of Data Science"
+  motto = "The dark side of Data Science"
   email = "billy.lamkc@gmail.com"
   twitter = "billylkc"
   linkedin = "billylkc"
