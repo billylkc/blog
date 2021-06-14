@@ -1,0 +1,30 @@
+#+STARTUP: content
+#+hugo_base_dir: ../
+#+hugo_section: ./posts
+
+#+hugo_weight: auto
+#+hugo_auto_set_lastmod: t
+
+#+author: Billy Lam
+
+* golang                                                              :@golang:
+
+** Why golang?                                                      :golang:
+:PROPERTIES:
+:EXPORT_FILE_NAME: why-golang
+:EXPORT_DATE: 2021-02-03
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/why-go.png
+:DESCRIPTION: Why Golang?
+:EXPORT_TITLE: Why Golang?
+:SUMMARY: Why Golang?
+:END:
+
+You can find a lot of reasons why people are using Golang. And here is my list.
+
+<!--more-->
+
+*** Creators
+#+BEGIN_QUOTE
+Imagine you are having not one, but a couple of yodas in computer science to work on the same language.
+#+END_QUOTE

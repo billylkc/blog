@@ -1,4 +1,4 @@
-#+STARTUP: showall
+#+STARTUP: content
 #+hugo_base_dir: ../
 #+hugo_section: ./posts
 
@@ -9,7 +9,7 @@
 
 * Demo                                                               :@demo:
 All posts in here will have the category set to /emacs/.
-** Writing Hugo blog in Org                                           :demo:
+** TODO Writing Hugo blog in Org                                      :demo:
 :PROPERTIES:
 :EXPORT_FILE_NAME: writing-hugo-blog-in-org-subtree-export
 :EXPORT_DATE: 2021-06-14
@@ -45,3 +45,36 @@ Cut out summary from your post content here.
       # Local Variables:
       # org-hugo-footer: "\n\n[//]: # \"Exported with love from a post written in Org mode\"\n[//]: # \"- https://github.com/kaushalmodi/ox-hugo\""
       # End:
+
+** Hello World                                                 :demo:golang:
+:PROPERTIES:
+:EXPORT_FILE_NAME: hello-world
+:EXPORT_DATE: 2021-02-01
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/hello_world.jpg
+:DESCRIPTION: My first go program
+:EXPORT_TITLE: My first go program
+:SUMMARY:  My first go program
+:END:
+
+My first Go Program
+
+<!--more-->
+
+*** My first Go program
+
+#+begin_src go :imports "fmt"
+  package main
+
+  import "fmt"
+
+  func main() {
+      fmt.Println("hello world")
+  }
+
+#+end_src
+
+Easy peasy~
+
+
+Photo by [KOBU Agency](https://unsplash.com/@kobuagency?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/hello-world?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

@@ -31,7 +31,7 @@ googleAnalytics = "260697059"
   github = "billylkc"
   siteStartYear = 2021
 
-  highlightjs = true
+  highlightjs = false
   highlightjsCDN = "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"
   highlightjsExtraLanguages = ["ocaml"]
   highlightjsTheme = "gruvbox-light"
