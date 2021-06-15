@@ -13,7 +13,7 @@ googleAnalytics = "260697059"
   linkColor = "seagreen"
 
   # dark mode
-  defaultDark = true
+  defaultDark = false
   backgroundDark = "black"
   # backgroundImageDark = "/me/background-dark.jpg"
   darkLinkColor = "darkseagreen"
@@ -53,3 +53,6 @@ googleAnalytics = "260697059"
 # in your config.toml
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+
+[markup.goldmark.renderer]
+  unsafe = true

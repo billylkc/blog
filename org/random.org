@@ -9,6 +9,97 @@
 
 * Random                                                              :@random:
 
+** GCP certified                                                    :random:
+:PROPERTIES:
+:EXPORT_FILE_NAME: gcp-certified
+:EXPORT_DATE: 2021-06-15
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/7-GCP-certified/thumbnails.jpg
+:DESCRIPTION: Google Cloud Architect certified
+:EXPORT_TITLE: GCP certified
+:SUMMARY: Google Cloud Architect certified
+:END:
+
+Yay!
+
+<!--more-->
+*** Finally
+
+I told myself two years ago I want to get both of these certs. Finally did it.
+
+
+It definitely helps me a lot when designing an end-to-end data science solution.
+
+_
+
+
+- Professional Data Engineer
+#+attr_html: :width 450px
+[[https://storage.googleapis.com/billylkc-blog-image/images/posts/7-GCP-certified/cloud_engineer.png]]
+
+- Professional Cloud Architect
+
+  Finally got my architect cerificate in the second try! I am super excited about this!
+
+#+attr_html: :width 450px
+[[https://storage.googleapis.com/billylkc-blog-image/images/posts/7-GCP-certified/cloud_architect.png]]
+
+- Code Jam 2021 (Qualification round)
+
+  It probably doesn't mean much. But I am still pretty excited to be qualified in the Code Jam 2021 First round. It's fun to pick up algorithm again once in a while.
+
+#+attr_html: :width 450px
+[[https://storage.googleapis.com/billylkc-blog-image/images/posts/7-GCP-certified/code-jam.PNG]]
+
+*** Lessons learned
+(To be added)
+
+*** What's next
+
+Time to pick up blogging again after the long long rest!
+
+Had been having too much fun writing Go, will start some Python related posts soon.
+
+
+_
+
+Certification directory
+- Credential Holder Directory - [[https://googlecloudcertified.credential.net/?location=Hong%20Kong&lat=22.3192011&lng=114.1696121][Here]]
+- Cloud Engineer - [[https://www.credential.net/e62d60a9-2793-49d5-aa13-c2da6e78bb44][Here]]
+- Cloud Architect - [[https://www.credential.net/ea788af1-e852-4f37-a41c-6d0a47f4580a?key=d7470292af46544357d920a42766417d3933f104fde97b4ebaec667d26fbaed3][Here]]
+
+
+_
+
+Reference
+- Photo by [Pineapple Supply Co.](https://unsplash.com/@pineapple?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/celebration?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+** Short break                                                      :random:
+:PROPERTIES:
+:EXPORT_FILE_NAME: a-short-break
+:EXPORT_DATE: 2021-03-09
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/6-rest/thumbnails-2.jpg
+:DESCRIPTION: A short break
+:EXPORT_TITLE: A short break
+:SUMMARY: A short break
+:END:
+
+For a little while.
+<br/>
+
+<!--more-->
+
+Preparing for code jam and GCP Exam.
+
+Start writing again in May. Happy Coding.
+
+
+_
+
+Reference
+- Photo by [Pascal Debrunner](https://unsplash.com/@debrupas?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/timeout?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
 ** Why this blog?                                                   :random:
 :PROPERTIES:
 :EXPORT_FILE_NAME: why-this-blog
@@ -26,28 +117,48 @@ Here is why I started this blog
 
 *** Reasons I started this blog
 
-1. **I like Golang.** I like emacs. And I like machine learning. I am writing what I like to do, this is what it's about, right?
+1. **I like Golang.**
 
-2. **I love knowledge sharing.** There have been times when I felt like the knowledge I was looking for wasn't out there and I am sure some of you have experienced the same thing. I am trying to contribute by putting down what I have learned here.
+   I like emacs. And I like machine learning. I am writing what I like to do, this is what it's about, right?
 
-3. **DevOps. Scalability and maintainability ascpect of Data Science.** If truth be told, in my team's settings, I am spending as much time to maintain and evaluate the models I built than actually building the models. I feel like there are not enough articles out there for us to understand on how to productionalize and maintain a DS product development cycle.
+2. **I love knowledge sharing.**
 
-4. **Minimalistic examples.** When it comes to machine learning or coding, I like learning by some short and reproducible examples. It is like the MVP concept in product development, it helps us understand what the model can do, and validate our ideas early in the development cycle.
+   There have been times when I felt like the knowledge I was looking for wasn't out there and I am sure some of you have experienced the same thing. I am trying to contribute by putting down what I have learned here.
 
-5. **Some data scraping techniques sharing too.** I constantly find myself needed to write some crawlers at certain point of my projects. Who knows, maybe one day you will find that useful too.
+3. **DevOps. Scalability and maintainability ascpect of Data Science.**
+
+   If truth be told, in my team's settings, I am spending as much time to maintain and evaluate the models I built than actually building the models. I feel like there are not enough articles out there for us to understand on how to productionalize and maintain a DS product development cycle.
+
+4. **Minimalistic examples.**
+
+   When it comes to machine learning or coding, I like learning by some short and reproducible examples. It is like the MVP concept in product development, it helps us understand what the model can do, and validate our ideas early in the development cycle.
+
+5. **Some data scraping techniques sharing too.**
+
+   I constantly find myself needed to write some crawlers at certain point of my projects. Who knows, maybe one day you will find that useful too.
 
 
 *** Stay tuned if you like these topics
 
-1. **Machine Learning.** Machine learning is a very board topic. Just to add my two cents on what excites me and how I get started in this field.
+1. **Machine Learning.**
 
-2. **Work more efficiently.** A carpenter is only as good as his tools. Don't under-estimate the power of a good editor and workflow can bring you. Give yourself a try if you find something useful here.
+   Machine learning is a very board topic. Just to add my two cents on what excites me and how I get started in this field.
 
-3. **Data Science workflow and maintainability.** I learned the hard way on how a data pipeline is critical to a successful data science project. There are some software development and operations techniques out there that will help you with faster development of your next project.
+2. **Work more efficiently.**
 
-4. **Want to start your own Data science project.** Sometimes we have a great idea of what our next model would be, but we just need more data. Learning how to write a crawler may help you get started with your project.
+   A carpenter is only as good as his tools. Don't under-estimate the power of a good editor and workflow can bring you. Give yourself a try if you find something useful here.
 
-5. **Um.. Golang.** I am a gopher, what can I say.
+3. **Data Science workflow and maintainability.**
+
+   I learned the hard way on how a data pipeline is critical to a successful data science project. There are some software development and operations techniques out there that will help you with faster development of your next project.
+
+4. **Want to start your own Data science project.**
+
+   Sometimes we have a great idea of what our next model would be, but we just need more data. Learning how to write a crawler may help you get started with your project.
+
+5. **Um.. Golang.**
+
+   I am a gopher, what can I say.
 
 *** TechStacks of this blog
 
@@ -59,3 +170,19 @@ Here is why I started this blog
 
 
 Photo by [Lindsay Henwood](https://unsplash.com/@lindsayhenwood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/@lindsayhenwood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+
+** Empty template
+:PROPERTIES:
+:EXPORT_FILE_NAME: file-name
+:EXPORT_DATE: 2021-02-22
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/4-functional-options/thumbnails.jpg
+:DESCRIPTION: description
+:EXPORT_TITLE: description
+:SUMMARY: description
+:END:
+
+Some short descrption
+
+<!--more-->

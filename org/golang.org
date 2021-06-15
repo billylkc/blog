@@ -25,8 +25,17 @@
 Easy static site crawling with goq
 
 <!--more-->
+*** Usage
+
+Basically, what you have to do is 3 things.
+- Study the **static page** (Not dynamically loaded content with javascript) and identify the elements with css selector
+- Construct a golang struct with the goquery tag (e.g. ~`goquery:"div p`"~)
+- Decode into a struct with ~goq.NewDecorder~
 
 *** Static site crawling
+
+Here I will be using a scraping friendly website ([[http://example.com/][example.com]]), and capture the header ~h1~ and the following paragraph =div p=.
+
 #+begin_src go :imports "fmt"
   package main
 
@@ -48,7 +57,7 @@ Easy static site crawling with goq
   func main() {
       res, err := http.Get("https://example.com/")
       if err != nil {
-          log.Fatal(err)
+              log.Fatal(err)
       }
       defer res.Body.Close()
 
@@ -56,7 +65,7 @@ Easy static site crawling with goq
 
       err = goq.NewDecoder(res.Body).Decode(&example)
       if err != nil {
-          log.Fatal(err)
+              log.Fatal(err)
       }
 
       fmt.Println(PrettyPrint(example))
@@ -64,8 +73,8 @@ Easy static site crawling with goq
 
   // PrettyPrint to print struct in a readable way
   func PrettyPrint(i interface{}) string {
-      s, _ := json.MarshalIndent(i, "", "\t")
-      return string(s)
+          s, _ := json.MarshalIndent(i, "", "\t")
+          return string(s)
   }
 #+end_src
 
@@ -80,12 +89,24 @@ Easy static site crawling with goq
 
 #+end_src
 
+
+*** Demo
+(To be added)
+
 *** Final thoughts
 
 I have used many different packages in Python and Go, this is by far the easiest and most intuitive package for simple static site crawling.
 
+Happy Coding.
 
-** Funtional Options in Go
+
+_Reference_
+- [[https://github.com/andrewstuart/goq][andrewstuart/goq]]
+- Photo by [Jean Carcallas](https://unsplash.com/@jean8carcallas?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/capture?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+
+
+** Funtional Options in Go                                          :golang:
 :PROPERTIES:
 :EXPORT_FILE_NAME: functional-options-in-go
 :EXPORT_DATE: 2021-02-22

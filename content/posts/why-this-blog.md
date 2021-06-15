@@ -6,11 +6,11 @@ lastmod = 2021-06-15
 tags = ["random"]
 categories = ["random"]
 draft = false
-weight = 2001
+weight = 2003
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/3-why-blog/thumbnails.jpg"
 [menu.main]
-  weight = 2001
+  weight = 2003
   identifier = "why-this-blog"
 +++
 
@@ -21,28 +21,48 @@ Here is why I started this blog
 
 ## Reasons I started this blog {#reasons-i-started-this-blog}
 
-1.  ****I like Golang.**** I like emacs. And I like machine learning. I am writing what I like to do, this is what it's about, right?
+1.  ****I like Golang.****
 
-2.  ****I love knowledge sharing.**** There have been times when I felt like the knowledge I was looking for wasn't out there and I am sure some of you have experienced the same thing. I am trying to contribute by putting down what I have learned here.
+    I like emacs. And I like machine learning. I am writing what I like to do, this is what it's about, right?
 
-3.  ****DevOps. Scalability and maintainability ascpect of Data Science.**** If truth be told, in my team's settings, I am spending as much time to maintain and evaluate the models I built than actually building the models. I feel like there are not enough articles out there for us to understand on how to productionalize and maintain a DS product development cycle.
+2.  ****I love knowledge sharing.****
 
-4.  ****Minimalistic examples.**** When it comes to machine learning or coding, I like learning by some short and reproducible examples. It is like the MVP concept in product development, it helps us understand what the model can do, and validate our ideas early in the development cycle.
+    There have been times when I felt like the knowledge I was looking for wasn't out there and I am sure some of you have experienced the same thing. I am trying to contribute by putting down what I have learned here.
 
-5.  ****Some data scraping techniques sharing too.**** I constantly find myself needed to write some crawlers at certain point of my projects. Who knows, maybe one day you will find that useful too.
+3.  ****DevOps. Scalability and maintainability ascpect of Data Science.****
+
+    If truth be told, in my team's settings, I am spending as much time to maintain and evaluate the models I built than actually building the models. I feel like there are not enough articles out there for us to understand on how to productionalize and maintain a DS product development cycle.
+
+4.  ****Minimalistic examples.****
+
+    When it comes to machine learning or coding, I like learning by some short and reproducible examples. It is like the MVP concept in product development, it helps us understand what the model can do, and validate our ideas early in the development cycle.
+
+5.  ****Some data scraping techniques sharing too.****
+
+    I constantly find myself needed to write some crawlers at certain point of my projects. Who knows, maybe one day you will find that useful too.
 
 
 ## Stay tuned if you like these topics {#stay-tuned-if-you-like-these-topics}
 
-1.  ****Machine Learning.**** Machine learning is a very board topic. Just to add my two cents on what excites me and how I get started in this field.
+1.  ****Machine Learning.****
 
-2.  ****Work more efficiently.**** A carpenter is only as good as his tools. Don't under-estimate the power of a good editor and workflow can bring you. Give yourself a try if you find something useful here.
+    Machine learning is a very board topic. Just to add my two cents on what excites me and how I get started in this field.
 
-3.  ****Data Science workflow and maintainability.**** I learned the hard way on how a data pipeline is critical to a successful data science project. There are some software development and operations techniques out there that will help you with faster development of your next project.
+2.  ****Work more efficiently.****
 
-4.  ****Want to start your own Data science project.**** Sometimes we have a great idea of what our next model would be, but we just need more data. Learning how to write a crawler may help you get started with your project.
+    A carpenter is only as good as his tools. Don't under-estimate the power of a good editor and workflow can bring you. Give yourself a try if you find something useful here.
 
-5.  ****Um.. Golang.**** I am a gopher, what can I say.
+3.  ****Data Science workflow and maintainability.****
+
+    I learned the hard way on how a data pipeline is critical to a successful data science project. There are some software development and operations techniques out there that will help you with faster development of your next project.
+
+4.  ****Want to start your own Data science project.****
+
+    Sometimes we have a great idea of what our next model would be, but we just need more data. Learning how to write a crawler may help you get started with your project.
+
+5.  ****Um.. Golang.****
+
+    I am a gopher, what can I say.
 
 
 ## TechStacks of this blog {#techstacks-of-this-blog}

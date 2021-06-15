@@ -3,13 +3,14 @@ title = "Functional Options in Go"
 author = ["Billy Lam"]
 date = 2021-02-22
 lastmod = 2021-06-15
+tags = ["golang"]
 categories = ["golang"]
 draft = false
-weight = 2001
+weight = 2002
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/4-functional-options/thumbnails.jpg"
 [menu.main]
-  weight = 2001
+  weight = 2002
   identifier = "functional-options-in-go"
 +++
 
