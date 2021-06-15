@@ -1,0 +1,188 @@
+#+STARTUP: content
+#+hugo_base_dir: ../
+#+hugo_section: ./posts
+
+#+hugo_weight: auto
+#+hugo_auto_set_lastmod: t
+
+#+author: Billy Lam
+
+* Thinking
+** Get HKEX data with Quandl in Python
+:PROPERTIES:
+:EXPORT_FILE_NAME: hkex-with-python
+:EXPORT_DATE: 2021-02-22
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover
+:DESCRIPTION: Get HKEX data with Quandl in Python
+:EXPORT_TITLE: Get HKEX data with Quandl in Python
+:SUMMARY: Get HKEX data with Quandl in Python
+:END:
+
+Some short description
+
+<!--more-->
+
+*** Introduction
+Free Quandl Stock API for HK stock data. Getting a stable source of daily stock data is all i wanted. But since Yahoo Finance shutdown their API, I have been using Quandl as an free alternatives. In this post, I will quickly show you how we can get some daily stock price data from HK Stock Exchange Market.
+
+
+*** Overview
+- Introduction to Quandl Python API
+
+- Getting 10 days of records for a few stocks
+
+- Set up a cron job to extract the data daily
+
+
+_
+Reference
+- Photo by [Chris Liverani](https://unsplash.com/@chrisliverani?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/stock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+
+** Python toolings
+:PROPERTIES:
+:EXPORT_FILE_NAME: python-toolings
+:EXPORT_DATE: 2021-02-22
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover
+:DESCRIPTION: description
+:EXPORT_TITLE: description
+:SUMMARY: description
+:END:
+
+Don't test me on syntax. I look it up in Google and API docs like a developer.
+
+<!--more-->
+
+
+** Google Search with Go
+:PROPERTIES:
+:EXPORT_FILE_NAME: google-search-with-go
+:EXPORT_DATE: 2021-02-22
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover
+:DESCRIPTION: Google Search with Go
+:EXPORT_TITLE: Google Search with Go
+:SUMMARY: Google Search with Go
+:END:
+
+Some short description
+
+<!--more-->
+
+*** Introduction
+
+**Data enrichment with Google Search.**
+Sometimes when the data we have is just some minimal text description, say, only the product name from your marketing department, there may not be enough features for you to build a model. I find it quite useful to enrich your data through Google Search. If you have faced the same problem before, read on.
+
+*** Overview
+
+1. Introduction to Google Search Package
+
+2. Quick Demo
+
+3. A Simple Use Case
+
+4. Add Arguments
+
+5. Compile to Binary File
+
+*** Google Search Package
+
+When i was looking for an Google search API in python, I didnt find one that is easy to use or the API often requires some sort of charges or registration. Finally I look for an alternatives in Go and this pacakge fits my simple use case. The package is maintained by Victor Alagwu and here is the link to the repo (rocketlaunchr/google-search). The package is using web scrapping to capture the search results, so make sure you use it responsibly.
+
+You can simply get the package by running
+
+=go get -u github.com/rocketlaunchr/google-search=
+
+*** Quick Demo
+
+The package author already gave a pretty good demo in his repo.
+#+begin_src go :imports "fmt"
+  package main
+
+  import (
+      "fmt"
+      "github.com/rocketlaunchr/google-search"
+  )
+
+  func main() {
+      fmt.Println(googlesearch.Search(nil, "cars for sale in Toronto, Canada"))
+  }
+#+end_src
+
+Results
+
+#+begin_src json
+[{
+    "rank": 1,
+    "url": "https://www.autotrader.ca/cars/on/toronto/",
+    "title": "New \u0026 Used Cars for sale in Toronto | autoTRADER.ca",
+    "description": "Looking to buy a car in Toronto? Visit autoTRADER.ca, Canada's largest selection for new \u0026 used cars, trucks and suvs."
+},
+{
+    "rank": 2,
+    "url": "https://www.carpages.ca/ontario/toronto/used-cars/",
+    "title": "Used Cars Toronto | Carpages.ca",
+    "description": "Used Cars for Sale in Toronto, ON. 2016 Hyundai Genesis. Sedan 4dr Sdn Technology. 2015 Mercedes-Benz ML-Class. 4MATIC 4dr ML 350 BlueTEC. 2010 Toyota Highl$
+}]
+#+end_src
+
+*** A Simple Use Case
+
+(To be added)
+
+
+** Docstrings
+:PROPERTIES:
+:EXPORT_FILE_NAME: docstrings
+:EXPORT_DATE: 2021-02-22
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover
+:DESCRIPTION: Docstrings
+:EXPORT_TITLE: Docstrings
+:SUMMARY:  Docstrings
+:END:
+
+Some short description
+
+<!--more-->
+
+*** Introduction
+*** Python Docstrings
+*** R Docstrings
+
+
+_
+
+Reference:
+- Photo by [200 Degrees](https://pixabay.com/users/200degrees-2051452/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1653351) on [Pixabay](https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1653351)
+
+
+** R ggplot2
+
+
+** Set up Git repository
+:PROPERTIES:
+:EXPORT_FILE_NAME: set-up-git-repo
+:EXPORT_DATE: 2021-02-22
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover
+:DESCRIPTION: Set up Git repository
+:EXPORT_TITLE: Set up Git repository
+:SUMMARY: Set up Git repository
+:END:
+
+Version control enables developers to move faster and it allows software teams to preserve efficiency and agility as the team scales.
+
+<!--more-->
+
+*** Introduction
+Keeping track of changes of your project is crucial, especially when you are collaborating with others. Having a way to know what changed in a file when and by whom, will help you adapt and be as lean as possible in the current fast-moving business evnvironment.
+
+While these version control tools make tracking changes easy, learning them can be hard. Let's clear up what Git can bring us, and learn it in a quick and painless way.
+
+*** Install Git client
+
+** Why emacs

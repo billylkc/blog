@@ -183,6 +183,6 @@ Photo by [Lindsay Henwood](https://unsplash.com/@lindsayhenwood?utm_source=unspl
 :SUMMARY: description
 :END:
 
-Some short descrption
+Some short description
 
 <!--more-->
