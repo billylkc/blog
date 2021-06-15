@@ -11,6 +11,186 @@
 
 * golang                                                              :@golang:
 
+** Static site crawling with goq                            :golang:crawler:
+:PROPERTIES:
+:EXPORT_FILE_NAME: static-site-crawling-with-goq
+:EXPORT_DATE: 2021-02-28
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/5-goq/thumbnails.jpg
+:DESCRIPTION:  Static site crawling with goq
+:EXPORT_TITLE: Static site crawling with goq
+:SUMMARY: Static site crawling with goq
+:END:
+
+Easy static site crawling with goq
+
+<!--more-->
+
+*** Static site crawling
+#+begin_src go :imports "fmt"
+  package main
+
+  import (
+      "encoding/json"
+      "fmt"
+      "log"
+      "net/http"
+
+      "astuart.co/goq"
+  )
+
+  // Example as a struct to capture data from example.com
+  type Example struct {
+      Title     string `goquery:"h1"`
+      Paragraph string `goquery:"div p"`
+  }
+
+  func main() {
+      res, err := http.Get("https://example.com/")
+      if err != nil {
+          log.Fatal(err)
+      }
+      defer res.Body.Close()
+
+      var example Example
+
+      err = goq.NewDecoder(res.Body).Decode(&example)
+      if err != nil {
+          log.Fatal(err)
+      }
+
+      fmt.Println(PrettyPrint(example))
+  }
+
+  // PrettyPrint to print struct in a readable way
+  func PrettyPrint(i interface{}) string {
+      s, _ := json.MarshalIndent(i, "", "\t")
+      return string(s)
+  }
+#+end_src
+
+*** Result
+
+#+begin_src go :imports "fmt"
+  {
+      "Title": "Example Domain",
+      "Paragraph": "This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.More information..."
+  }
+
+
+#+end_src
+
+*** Final thoughts
+
+I have used many different packages in Python and Go, this is by far the easiest and most intuitive package for simple static site crawling.
+
+
+** Funtional Options in Go
+:PROPERTIES:
+:EXPORT_FILE_NAME: functional-options-in-go
+:EXPORT_DATE: 2021-02-22
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/4-functional-options/thumbnails.jpg
+:DESCRIPTION: Functional Options in Go
+:EXPORT_TITLE: Functional Options in Go
+:SUMMARY: Functional Options in Go
+:END:
+
+A nice way to set options in Go
+
+<!--more-->
+
+*** Functional Option
+#+begin_src go :imports "fmt"
+  package main
+
+  import (
+      "encoding/json"
+      "fmt"
+      "time"
+  )
+
+  type Foo struct {
+      Code      int
+      Verbosity int
+      Timeout   time.Duration // In nanoseconds
+  }
+
+  type option func(*Foo)
+
+  func main() {
+      fmt.Println("Demo for option chain")
+      foo := New(5)
+
+      fmt.Println("Before")
+      fmt.Println(PrettyPrint(foo))
+
+      fmt.Println("After")
+      foo.Option(Verbosity(-1))     // Set verbosity
+      foo.Option(SetTimeout("10s")) // Set timeout to 10 sec
+
+      fmt.Println(PrettyPrint(foo))
+  }
+
+  func New(code int) Foo {
+      return Foo{
+          Code: code,
+      }
+  }
+
+  // Option sets the options specified.
+  func (f *Foo) Option(opts ...option) {
+      for _, opt := range opts {
+          opt(f)
+      }
+  }
+
+  // Verbosity sets Foo's verbosity level to v.
+  func Verbosity(v int) option {
+      return func(f *Foo) {
+          f.Verbosity = v
+      }
+  }
+
+  // SetTimeout sets timeout using ParseDuration
+  // input is like 5s, 1m, etc
+  func SetTimeout(t string) option {
+      timeout, _ := time.ParseDuration(t)
+      return func(f *Foo) {
+          f.Timeout = timeout
+      }
+  }
+
+  // PrettyPrint to print struct in a readable way
+  func PrettyPrint(i interface{}) string {
+      s, _ := json.MarshalIndent(i, "", "\t")
+      return string(s)
+  }
+#+end_src
+
+*** Results
+
+#+begin_src go :imports "fmt"
+  // Demo for option chain
+
+  // Before
+  // {
+  //         "Code": 5,
+  //         "Verbosity": 0,
+  //         "Timeout": 0
+  // }
+  // After
+  // {
+  //         "Code": 5,
+  //         "Verbosity": -1,
+  //         "Timeout": 10000000000
+  // }
+#+end_src
+
+You can find the complete working example in - [[https://github.com/billylkc/blogposts/tree/3_go_functional_options][Here]]
+
+Reference: [[https://commandcenter.blogspot.com/2014/01/self-referential-functions-and-design.html][Self-referential functions and the design of options]]
+
 ** Parse JSON API response in Go                                :golang:api:
 :PROPERTIES:
 :EXPORT_FILE_NAME: parse-json-api-response-in-Go
@@ -394,3 +574,19 @@ I do find Go very easy to use for data scraping and hosting API.
 
 *** Final Thoughts
 Some final thoughts
+
+
+** Empty template
+:PROPERTIES:
+:EXPORT_FILE_NAME: file-name
+:EXPORT_DATE: 2021-02-22
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/4-functional-options/thumbnails.jpg
+:DESCRIPTION: description
+:EXPORT_TITLE: description
+:SUMMARY: description
+:END:
+
+Some short descrption
+
+<!--more-->
