@@ -55,6 +55,9 @@ Don't test me on syntax. I look it up in Google and API docs like a developer.
 
 <!--more-->
 
+*** Cheat sheet
+***
+
 
 ** Google Search with Go
 :PROPERTIES:
@@ -185,4 +188,37 @@ While these version control tools make tracking changes easy, learning them can 
 
 *** Install Git client
 
+
 ** Why emacs
+
+** Python Machine Learning Snippets
+:PROPERTIES:
+:EXPORT_FILE_NAME: python-machine-learning-snippets
+:EXPORT_DATE: 2021-02-22
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/4-functional-options/thumbnails.jpg
+:DESCRIPTION: Python Machine Learning Snippets
+:EXPORT_TITLE: Python Machine Learning Snippets
+:SUMMARY: Python Machine Learning Snippets
+:END:
+
+Some short descrption
+
+<!--more-->
+
+
+** Empty template
+
+:PROPERTIES:
+:EXPORT_FILE_NAME: file-name
+:EXPORT_DATE: 2021-02-22
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/4-functional-options/thumbnails.jpg
+:DESCRIPTION: description
+:EXPORT_TITLE: description
+:SUMMARY: description
+:END:
+
+Some short descrption
+
+<!--more-->
