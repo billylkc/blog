@@ -166,9 +166,9 @@ Let say we want to create a program that will retrieve the first 3 paragraphs of
 #+ATTR_HTML: target="_blank"
 [[https://storage.googleapis.com/billylkc-blog-image/images/posts/5-goq/goq-wiki-o.gif]]
 
-6. Full Example
+Full Example
 
-   You can find out the full code example - [[https://github.com/billylkc/blogposts/blob/4_goq_wiki/main.go][Here]]
+You can find out the full code example - [[https://github.com/billylkc/blogposts/blob/4_goq_wiki/main.go][Here]]
 
 **** b) OpenRice
 Similarly for OpenRice. You can easily check that the css selector for title would be =div.cms-detail-title.or-font-family= and content as =div.cms-detail-body-text div=.
@@ -249,6 +249,9 @@ Result (Partial)
         ]
   }
 #+end_src
+
+Here is the source code - [[https://github.com/billylkc/blogposts/blob/5_goq_openrice/main.go][Here]]
+
 
 *** Final thoughts
 

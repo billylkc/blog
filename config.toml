@@ -1,4 +1,4 @@
-baseURL = "http://billylkc.com:5000/"
+baseURL = "http://billylkc.com"
 languageCode = "en-us"
 title = "Another Data Science Blog"
 theme = "dream"

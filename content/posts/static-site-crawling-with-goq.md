@@ -163,9 +163,9 @@ Let say we want to create a program that will retrieve the first 3 paragraphs of
 
 {{< figure src="https://storage.googleapis.com/billylkc-blog-image/images/posts/5-goq/goq-wiki-o.gif" >}}
 
-1.  Full Example
+Full Example
 
-    You can find out the full code example - [Here](https://github.com/billylkc/blogposts/blob/4%5Fgoq%5Fwiki/main.go)
+You can find out the full code example - [Here](https://github.com/billylkc/blogposts/blob/4%5Fgoq%5Fwiki/main.go)
 
 
 ### b) OpenRice {#b-openrice}
@@ -248,6 +248,8 @@ Result (Partial)
       ]
 }
 ```
+
+Here is the source code - [Here](https://github.com/billylkc/blogposts/blob/5%5Fgoq%5Fopenrice/main.go)
 
 
 ## Final thoughts {#final-thoughts}
