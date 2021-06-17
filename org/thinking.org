@@ -40,7 +40,7 @@ Reference
 - Photo by [Chris Liverani](https://unsplash.com/@chrisliverani?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/stock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 
-** Python toolings
+** DONE Python toolings
 :PROPERTIES:
 :EXPORT_FILE_NAME: python-toolings
 :EXPORT_DATE: 2021-02-22
@@ -56,7 +56,7 @@ Don't test me on syntax. I look it up in Google and API docs like a developer.
 <!--more-->
 
 *** Cheat sheet
-***
+
 
 
 ** Google Search with Go
