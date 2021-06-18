@@ -2,15 +2,15 @@
 title = "Why Golang?"
 author = ["Billy Lam"]
 date = 2021-02-03
-lastmod = 2021-06-15
+lastmod = 2021-06-18
 tags = ["golang"]
 categories = ["golang"]
 draft = false
-weight = 2001
+weight = 2004
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/why-go.png"
 [menu.main]
-  weight = 2001
+  weight = 2004
   identifier = "why-golang"
 +++
 
@@ -156,7 +156,7 @@ Reference: [Companies using Go](https://github.com/golang/go/wiki/GoUsers)
 
 ## Developer Survey {#developer-survey}
 
-In February 2020 StackOverflow condcted a survey with nearly 65,000 developers on how they learn and level up, which tools they’re using, and what they want. Here are some take aways on Golang.
+In February 2020 StackOverflow conducted a survey with nearly 65,000 developers on how they learn and level up, which tools they’re using, and what they want. Here are some take aways on Golang.
 
 -   In terms of Median Salary versus Experience. Golang programers are doing AOkay. (Possible bias of the big pay-roll in larger companies though)
 

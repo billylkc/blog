@@ -2,7 +2,7 @@
 title = "A short break"
 author = ["Billy Lam"]
 date = 2021-03-09
-lastmod = 2021-06-15
+lastmod = 2021-06-18
 tags = ["random"]
 categories = ["random"]
 draft = false

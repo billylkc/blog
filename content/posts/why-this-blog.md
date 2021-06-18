@@ -2,13 +2,13 @@
 title = "Why this blog?"
 author = ["Billy Lam"]
 date = 2021-02-18
-lastmod = 2021-06-15
+lastmod = 2021-06-18
 tags = ["random"]
 categories = ["random"]
 draft = false
 weight = 2003
 nolastmod = true
-cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/3-why-blog/thumbnails.jpg"
+cover = "https://storage.googleapis.com/billylkc-blog-image/images/data.jpg"
 [menu.main]
   weight = 2003
   identifier = "why-this-blog"
@@ -17,6 +17,15 @@ cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/3-why-b
 Here is why I started this blog
 
 <!--more-->
+
+
+## Introduction {#introduction}
+
+> When you’ve written the same code 3 times, write a function
+>
+> When you’ve given the same in-person advice 3 times, write a blog post - David Robinson
+
+Here we are.
 
 
 ## Reasons I started this blog {#reasons-i-started-this-blog}
@@ -29,7 +38,7 @@ Here is why I started this blog
 
     There have been times when I felt like the knowledge I was looking for wasn't out there and I am sure some of you have experienced the same thing. I am trying to contribute by putting down what I have learned here.
 
-3.  ****DevOps. Scalability and maintainability ascpect of Data Science.****
+3.  ****DevOps. Scalability and maintainability aspect of Data Science.****
 
     If truth be told, in my team's settings, I am spending as much time to maintain and evaluate the models I built than actually building the models. I feel like there are not enough articles out there for us to understand on how to productionalize and maintain a DS product development cycle.
 
@@ -73,4 +82,4 @@ Here is why I started this blog
 
 3.  ****Python and Golang.**** Emacs. Linux. Jenkins. Git.
 
-Photo by [Lindsay Henwood](<https://unsplash.com/@lindsayhenwood?utm%5Fsource=unsplash&utm%5Fmedium=referral&utm%5Fcontent=creditCopyText>) on [Unsplash](<https://unsplash.com/@lindsayhenwood?utm%5Fsource=unsplash&utm%5Fmedium=referral&utm%5Fcontent=creditCopyText>)
+Photo by [Franki Chamaki](<https://unsplash.com/@franki?utm%5Fsource=unsplash&utm%5Fmedium=referral&utm%5Fcontent=creditCopyText>) on [Unsplash](<https://unsplash.com/s/photos/data?utm%5Fsource=unsplash&utm%5Fmedium=referral&utm%5Fcontent=creditCopyText>)

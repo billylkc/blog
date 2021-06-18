@@ -2,7 +2,7 @@
 title = "GCP certified"
 author = ["Billy Lam"]
 date = 2021-06-15
-lastmod = 2021-06-15
+lastmod = 2021-06-18
 tags = ["random"]
 categories = ["random"]
 draft = false
@@ -33,7 +33,7 @@ It definitely helps me a lot when designing an end-to-end data science solution.
 
 -   Professional Cloud Architect
 
-    Finally got my architect cerificate in the second try! I am super excited about this!
+    Finally got my architect certificate in the second try! I am super excited about this!
 
 {{< figure src="https://storage.googleapis.com/billylkc-blog-image/images/posts/7-GCP-certified/cloud%5Farchitect.png" width="450px" >}}
 

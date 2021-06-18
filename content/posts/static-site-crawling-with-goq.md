@@ -2,7 +2,7 @@
 title = "Static site crawling with goq"
 author = ["Billy Lam"]
 date = 2021-02-28
-lastmod = 2021-06-16
+lastmod = 2021-06-18
 tags = ["golang", "crawler"]
 categories = ["golang"]
 draft = false
@@ -87,7 +87,7 @@ func PrettyPrint(i interface{}) string {
 
 ## Other Demo {#other-demo}
 
-The following demos are strictly for illustration purposes. Do check the `robots.txt` file of each site and crawl reponsibly.
+The following demos are strictly for illustration purposes. Do check the `robots.txt` file of each site and crawl responsibly.
 
 
 ### a) Wikipedia {#a-wikipedia}
@@ -101,7 +101,7 @@ Let say we want to create a program that will retrieve the first 3 paragraphs of
 
 2.  Create a ****struct**** with the ****goquery tag****
 
-    We can easliy check that the header is `h1` and detailed descriptions `div.mw-parser-output p` and it should return a list of strings
+    We can easily check that the header is `h1` and detailed descriptions `div.mw-parser-output p` and it should return a list of strings
 
     ```go
     type Wiki struct {

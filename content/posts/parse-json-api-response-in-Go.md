@@ -2,15 +2,15 @@
 title = "Parse JSON API response in Go"
 author = ["Billy Lam"]
 date = 2021-02-08
-lastmod = 2021-06-15
+lastmod = 2021-06-18
 tags = ["golang", "api"]
 categories = ["golang"]
 draft = false
-weight = 2001
+weight = 2003
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/parse-json.jpg"
 [menu.main]
-  weight = 2001
+  weight = 2003
   identifier = "parse-json-api-response-in-go"
 +++
 
@@ -131,7 +131,7 @@ Response struct preview (partial)
 Finally loop through the data node and print out the FirstName of the result
 
 ```go
-// Loop throush the data node for the FirstName
+// Loop through the data node for the FirstName
 for _, rec := range result.Data {
     fmt.Println(rec.FirstName)
 }

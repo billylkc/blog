@@ -93,7 +93,7 @@ Sometimes when the data we have is just some minimal text description, say, only
 
 *** Google Search Package
 
-When i was looking for an Google search API in python, I didnt find one that is easy to use or the API often requires some sort of charges or registration. Finally I look for an alternatives in Go and this pacakge fits my simple use case. The package is maintained by Victor Alagwu and here is the link to the repo (rocketlaunchr/google-search). The package is using web scrapping to capture the search results, so make sure you use it responsibly.
+When i was looking for an Google search API in python, I didnt find one that is easy to use or the API often requires some sort of charges or registration. Finally I look for an alternatives in Go and this package fits my simple use case. The package is maintained by Victor Alagwu and here is the link to the repo (rocketlaunchr/google-search). The package is using web scrapping to capture the search results, so make sure you use it responsibly.
 
 You can simply get the package by running
 
@@ -182,7 +182,7 @@ Version control enables developers to move faster and it allows software teams t
 <!--more-->
 
 *** Introduction
-Keeping track of changes of your project is crucial, especially when you are collaborating with others. Having a way to know what changed in a file when and by whom, will help you adapt and be as lean as possible in the current fast-moving business evnvironment.
+Keeping track of changes of your project is crucial, especially when you are collaborating with others. Having a way to know what changed in a file when and by whom, will help you adapt and be as lean as possible in the current fast-moving business environment.
 
 While these version control tools make tracking changes easy, learning them can be hard. Let's clear up what Git can bring us, and learn it in a quick and painless way.
 
@@ -202,12 +202,12 @@ While these version control tools make tracking changes easy, learning them can 
 :SUMMARY: Python Machine Learning Snippets
 :END:
 
-Some short descrption
+Some short description
 
 <!--more-->
 
 
-** Empty template
+** TODO Empty template
 
 :PROPERTIES:
 :EXPORT_FILE_NAME: file-name
@@ -219,6 +219,6 @@ Some short descrption
 :SUMMARY: description
 :END:
 
-Some short descrption
+Some short description
 
 <!--more-->

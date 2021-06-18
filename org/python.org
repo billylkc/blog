@@ -10,7 +10,7 @@
 
 #+author: Billy Lam
 
-* Python                                                                :@python:
+* Python                                                                :@python:python:
 
 ** Python Cheatsheet                                           :python:workflow:
 :PROPERTIES:
@@ -28,10 +28,6 @@ Dont ask me about the syntax. I look it up on Google and API documentations. And
 <!--more-->
 
 *** Introduction
-
-#+BEGIN_QUOTE
-“Talk is cheap. Show me the code.” - Linus Torvalds
-#+END_QUOTE
 
 If you are having trouble to remember the exact syntax no matter how many times you've used it, you are not alone.
 
@@ -134,7 +130,7 @@ Introducing the ultimate programming cheatsheet - *cheat.sh* ([[https://cht.sh/]
      #  > args, kwargs : tuple and dict
      #  >> Optional positional and keyword arguments to pass to func
      #
-     #  Additional Args passed in "\*args" get passed _after_ the implict
+     #  Additional Args passed in "\*args" get passed _after_ the implicit
      #  group argument.
      #
      #  so using your code
@@ -329,7 +325,7 @@ Reference:
 *** Reference
 - https://www.pexels.com/photo/briefcase-with-documents-placed-on-table-4792282/
 
-** Empty template
+** TODO Empty template
 :PROPERTIES:
 :EXPORT_FILE_NAME: file-name
 :EXPORT_DATE: 2021-02-22
@@ -340,6 +336,6 @@ Reference:
 :SUMMARY: description
 :END:
 
-Some short descrption
+Some short description
 
 <!--more-->

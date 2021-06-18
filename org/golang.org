@@ -10,7 +10,7 @@
 
 #+author: Billy Lam
 
-* golang                                                              :@golang:
+* golang                                                              :@golang:golang:
 
 ** Static site crawling with goq                            :golang:crawler:
 :PROPERTIES:
@@ -92,7 +92,7 @@ Here I will be using a scraping friendly website ([[http://example.com/][example
 
 
 *** Other Demo
-The following demos are strictly for illustration purposes. Do check the =robots.txt= file of each site and crawl reponsibly.
+The following demos are strictly for illustration purposes. Do check the =robots.txt= file of each site and crawl responsibly.
 
 **** a) Wikipedia
 
@@ -105,7 +105,7 @@ Let say we want to create a program that will retrieve the first 3 paragraphs of
 
 2. Create a **struct** with the **goquery tag**
 
-   We can easliy check that the header is =h1= and detailed descriptions =div.mw-parser-output p= and it should return a list of strings
+   We can easily check that the header is =h1= and detailed descriptions =div.mw-parser-output p= and it should return a list of strings
    #+begin_src go :imports "fmt"
      type Wiki struct {
          Title   string   `goquery:"h1"`
@@ -268,7 +268,7 @@ _Reference_
 
 
 
-** Funtional Options in Go                                          :golang:
+** Functional Options in Go                                         :golang:
 :PROPERTIES:
 :EXPORT_FILE_NAME: functional-options-in-go
 :EXPORT_DATE: 2021-02-22
@@ -493,7 +493,7 @@ Response struct preview (partial)
 
 Finally loop through the data node and print out the FirstName of the result
 #+begin_src go :imports "fmt"
-  // Loop throush the data node for the FirstName
+  // Loop through the data node for the FirstName
   for _, rec := range result.Data {
       fmt.Println(rec.FirstName)
   }
@@ -724,7 +724,7 @@ Reference: [[https://github.com/golang/go/wiki/GoUsers][Companies using Go]]
 
 *** Developer Survey
 
-In February 2020 StackOverflow condcted a survey with nearly 65,000 developers on how they learn and level up, which tools they’re using, and what they want. Here are some take aways on Golang.
+In February 2020 StackOverflow conducted a survey with nearly 65,000 developers on how they learn and level up, which tools they’re using, and what they want. Here are some take aways on Golang.
 
 
 
@@ -759,7 +759,7 @@ I do find Go very easy to use for data scraping and hosting API.
 Some final thoughts
 
 
-** Empty template
+** TODO Empty template
 :PROPERTIES:
 :EXPORT_FILE_NAME: file-name
 :EXPORT_DATE: 2021-02-22
@@ -770,6 +770,6 @@ Some final thoughts
 :SUMMARY: description
 :END:
 
-Some short descrption
+Some short description
 
 <!--more-->

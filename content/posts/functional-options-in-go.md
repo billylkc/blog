@@ -2,7 +2,7 @@
 title = "Functional Options in Go"
 author = ["Billy Lam"]
 date = 2021-02-22
-lastmod = 2021-06-15
+lastmod = 2021-06-18
 tags = ["golang"]
 categories = ["golang"]
 draft = false
