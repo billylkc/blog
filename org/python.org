@@ -286,12 +286,12 @@ Reference
 - Reference Photo by [cottonbro](https://www.pexels.com/@cottonbro?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) on [Pexels](https://www.pexels.com/photo/white-printer-paper-on-brown-round-table-7128752/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
 
 
-** TODO Docstrings                                                  :python:
+** Docstrings                                                       :python:
 :PROPERTIES:
 :EXPORT_FILE_NAME: docstrings
-:EXPORT_DATE: 2021-06-17
+:EXPORT_DATE: 2021-06-19
 :EXPORT_HUGO_MENU: :menu "main"
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/10-docstrings/thumbnails.jpg
 :DESCRIPTION: What is docstrings?
 :EXPORT_TITLE: What is docstrings?
 :SUMMARY:  What is docstrings?
@@ -299,31 +299,136 @@ Reference
 
 Code is more often read than written.
 
-— Guido van Rossum
-
 <!--more-->
 
 *** Introduction
 
-#+BEGIN_QUOTE
-"It doesn’t matter how good your software is, because if the documentation is not good enough, people will not use it."
+Learn to write a good function documentation.
 
-— Daniele Procida
-#+END_QUOTE
+Even if you don’t intend anybody else to read your code, there’s still a very good chance that somebody will have to stare at your code and figure out what it does. That person is probably going to be you too, twelve months from now. So be kind to yourself, and start writing some good code and documentation.
+
+Docstrings are the string literals that appear right after the definition of a function, method, class, or module. To me, it is like **a summary of what a function does**. Sometimes I just dont care what the actual implementation is (At first at least 🙂), just tell me what the input, output, and a short descriptin of what it does, before even asking me to have a look at your code.
+
+Let's have a look at the examples in different languages.
 
 *** Python Docstrings
+**** a) One-liner docstring
+
+Use short one-liner description for functions that you think is intuitive.
+But always always write a docstings for your functions.
+
+#+BEGIN_SRC python
+  def square(n):
+      """ Takes an integer and return a square of it """
+      return n**2
+#+END_SRC
+
+**** b) Detailed docstring
+
+Make sure to make it clear that what is the **input** and **output** of your function, and more importantly is to include the **type** as well.
+I usually include the followings.
+
+- Description
+- Arguments with types
+- Return value
+- (Optional) Detailed steps
+- (Optional) Example and output
+
+
+#+BEGIN_SRC python
+  from datetime import datetime
+  from dateutil.rrule import rrule, MONTHLY
+  from typing import List
+
+  def get_months_between_dates(start: str, end:str) -> List:
+
+      """
+      Return a list of months between two dates in YYYYMM format.
+      Use to convert from some start end date to a list of months
+
+      Args:
+               start (str): Start date in YYYYMM format
+               end (str): End date in YYYYMM format
+
+      Returns:
+               month_list ([]str): A list of month between the two months input (Inclusive)
+
+      Example:
+               month_list = get_months_between_dates('201802', '201902')
+
+      Example output:
+               ['201802', '201803', '201804', '201805', '201806', '201807', '201808', '201809', '201810', '201811', '201812', '201901', '201902']
+      """
+
+      start_dt = datetime.strptime(start, "%Y%m")
+      end_dt   = datetime.strptime(end, "%Y%m")
+      month_list = [dt.strftime("%Y%m") for dt in rrule(MONTHLY, dtstart=start_dt, until=end_dt)]
+      return month_list
+
+#+END_SRC
+
 *** R Docstrings
+
+For R, I find that the standard documentation format is kinda hard to read (personal preference), so I follow the python docstring format as well.
+
+One of the draw back would be you cant read the documentation from the ~help~ function natively supported by R. But it gives you a more consistent feel between Python and R projects.
+
+
+#+BEGIN_SRC r
+  library(data.table)
+  round_dataframe <- function(df, digits = 2) {
+
+    ## Round the numeric columns of the provided dataframe
+    ##
+    ## Args:
+    ##  df (Dataframe): Dataframe to be rounded
+    ##  digits (num): No of digits to be rounded for numeric columns
+    ##
+    ## Returns:
+    ##  df (Dataframe): Dataframe with rounded numbers
+    ##
+    ## Example:
+    ##  dt = as.data.table(iris)
+    ##  dt = round_dataframe(df = dt, digits = 0)
+
+    # Find numeric cols, round the columns with no of digits provided
+    numeric.cols = colnames(Filter(is.numeric, df))
+    df[, (numeric.cols) := round(.SD, digits), .SDcols = numeric.cols]
+
+    return(df)
+  }
+
+#+END_SRC
+
+Reference: [[https://style.tidyverse.org/
+][R tidyverse style guide]]
+
 *** Go Docstrings
 
+For Go, you can easily tell from the function signature about the input, output and description of the function.
+It also comes with some built-in support for documentation. You can easily generate the doc with ~go doc --all~ or ~godoc -http=localhost:7000~.
 
+
+#+BEGIN_SRC go
+
+  // Add simply adds the two integers together
+  func Add(x int, y int) int{
+          return x + y
+  }
+
+#+END_SRC
+
+
+*** Final Thoughts
+
+Hopefully, you start to see the benefits of writing a good function signature after this post. \\
+Happy Coding!
 
 _
 
-Reference:
--
+Reference Photo by [Gustavo Fring](https://www.pexels.com/@gustavo-fring?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels) on [Pexels](https://www.pexels.com/photo/clever-little-student-writing-in-notebook-while-studying-at-home-3874375/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels)
 
-*** Reference
-- https://www.pexels.com/photo/briefcase-with-documents-placed-on-table-4792282/
+
 
 ** TODO Empty template
 :PROPERTIES:
