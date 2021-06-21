@@ -12,13 +12,92 @@
 
 * Python                                                                :@python:python:
 
+** TODO Python debugger pdb                                       :workflow:
+:PROPERTIES:
+:EXPORT_FILE_NAME: python-debugger
+:EXPORT_DATE: 2021-06-21
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover
+:DESCRIPTION: Python Debugging with pdb.
+:EXPORT_TITLE: Python Debugging with pdb
+:SUMMARY: Python Debugging with pdb
+:END:
+
+I don't know where you are, I don't know how you work. But I will find you, And.. \\
+
+
+I will fix you - TheRaxTon
+
+<!--more-->
+
+*** Introduction
+
+The only way to be a zero bug programmer is to **not write any code**.
+
+All jokes aside, tooling plays an important roles in debugging. I’ve seen many practitioners try to spot bugs using only print statements instead of actual debugging tools. Sometimes it is personal preference, and sometimes it is just no one has introduced one to them before.
+
+This post is a gentle introduction of the debugging tools ~pdb~ and ~debugging mode~ in Visual Studio Code. Hopefully you will have a better understanding on what functionalities a good debugger offers.
+
+*** pdb
+
+The Python debugger ~pdb~ implements an **interactive debugging environment** that you can use with any of your programs written in Python.
+
+With features that let you pause your program, look at what values your variables are set to, and go through program execution in a discrete step-by-step manner, you can more fully understand what your program is doing and find bugs that exist in the logic or troubleshoot known issues.
+
+Cheatsheet
+
+Basic
+#+CAPTION: Basic commands
+#+ATTR_HTML: :class table table-striped table-dark
+| Command      | Description                 |
+|--------------+-----------------------------|
+| **(h)** help | List all available commands |
+| **(q)** quit | Quit debug session          |
+
+#+CAPTION: Navigation and debugging
+| Command                          | Description                   |
+|----------------------------------+-------------------------------|
+| **(l)** list                     | List a few lines              |
+| **(ll)** long list               | List more lines               |
+|----------------------------------+-------------------------------|
+| **(n)** next                     | Move to next line             |
+| **(s)** step                     | Step into function            |
+| **(j)** jump                     | Jump                          |
+| **ENTER**                        | Repeat last command           |
+| **(p)** print **/expr/**         | Print variable /expr/         |
+| **(pp)** pretty print **/expr/** | Pretty Print /expr/           |
+|----------------------------------+-------------------------------|
+| **(b)** break                    | Show all break point          |
+| **(b)** break **/num/**          | Set break point at line /num/ |
+| **(c)** continue                 | Continue til next break point |
+|----------------------------------+-------------------------------|
+| **locals()**                     | List local variables          |
+
+Reference: [[https://appletree.or.kr/quick_reference_cards/Python/Python%20Debugger%20Cheatsheet.pdf][Python Debugger Cheatsheet]]
+
+*** Demo
+
+*** Debugging in visual studio code
+
+*** Final thoughts
+
+Let's practice the dark art of Debugging.
+Happy Coding.
+
+
+_
+
+Reference:
+-
+
+
 ** TODO Getting HKEX data with Quandl in Python                        :api:
 :PROPERTIES:
 :EXPORT_FILE_NAME: hkex-with-python
 :EXPORT_DATE: 2021-06-21
 :EXPORT_HUGO_MENU: :menu "main"
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover
-:DESCRIPTION: Getting HKEX data with Quandl in Python. Historical daily HKEX data using API. Yahoo Finance.
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/11-quandl/thumnails.jpg
+:DESCRIPTION: Getting HKEX data with Quandl in Python. Historical daily HKEX data using API. Stock exchange in Yahoo Finance Hong Kong.
 :EXPORT_TITLE: Getting HKEX data with Quandl in Python
 :SUMMARY: Getting HKEX data with Quandl in Python
 :END:
@@ -30,7 +109,7 @@ Free alternatives to get HKEX daily stock data after Yahoo Finance
 *** Introduction
 Free Quandl Stock API for HK stock data.
 
-Getting a stable source of daily stock data is all I wanted. But since Yahoo Finance shutdown their API, I have been using Quandl as an free alternatives. In this post, I will quickly show you how we can get some daily stock price data from HK Stock Exchange Market.
+Getting a stable source of daily stock data is all I wanted. But since Yahoo Finance shutdown their API, I have been using [[https://www.quandl.com/][Quandl]] as an free alternatives. In this post, I will quickly show you how we can get some daily stock price data from HK Stock Exchange Market.
 
 *** Overview
 
@@ -48,13 +127,19 @@ In this article, we will be covering the following topics
 **Quandl** is a marketplace for financial, economic and alternative data delivered in
 modern formats for today's financial analysts It provides free API (Python, Excel, Matlab, R, etc..) for registered users.
 
-You can register and get a free API key here - [Here]. The setup should be quite straight forward.
+You can register and get a **free API key** - [[https://www.quandl.com/sign-up][Here]]. The setup should be quite straight forward.
 
 Here is a usage table of the free tier for your reference. We will be using the free tier as an example here.
 
-| Tier | Requests per Day | Concurrent Request |
-|------+------------------+--------------------|
-| Free |                  | 1                  |
+Rate Limits
+|---------+-------------------+--------------------|
+| Tier    | Requests per Day  | Concurrent Request |
+|---------+-------------------+--------------------|
+| Free    |  50,000 calls/day |                  1 |
+| Premium | 720,000 calls/day |                  - |
+|---------+-------------------+--------------------|
+
+Remarks: This is not an affiliated post, I just want to find a stable date source for the Hong Kong stock exchange data.
 
 *** Basic setup and quick exploration
 
@@ -66,19 +151,18 @@ pip install quandl
 
 **** b) Set up environment variable
 
-Given that the free API is not a 'secret' secret. Putting the token in an environment variable would serve the purpose of this short example.
+Given that the free API is not a 'secret' secret. Putting the token in an environment variable would serve the purpose in this example.
 
-- Open your =~/.bashrc= and add the following line (Persistent)
+- Open your =~/.bashrc= and add the following line (Persistent) \\
+  In =~/.bashrc=
   #+BEGIN_SRC bash
-    # Inside .bashrc
     export QUANDL_TOKEN="YOUR_API_TOKEN"
   #+END_SRC
 
+  In command line
   #+BEGIN_SRC bash
-    # In command line
     source ~/.bashrc
   #+END_SRC
-
 
 - Or simply run in the command line (One off)
   #+BEGIN_SRC bash
@@ -89,7 +173,7 @@ Given that the free API is not a 'secret' secret. Putting the token in an enviro
 
 It is quite straight forward to get the data, just call it with the **stock code** ~HKEX/00005~ and ~quandl.get~.
 
-#+BEGIN_SRC python
+#+BEGIN_SRC python :session :results value
   import os
   import requests
   import pandas as pd
@@ -103,49 +187,111 @@ It is quite straight forward to get the data, just call it with the **stock code
   code = str(num).zfill(5)
   code_str = "HKEX/{}".format(code)
   data = quandl.get(code_str, rows = 10)
-  data['code'] = code
+  data['Code'] = code
 
   print(data)
 
 #+END_SRC
 
+
+
 *** Getting data
 
 Let's extend our example and try to get **all** the stocks in the past 10 days.
 
-**** a) Get a list of all codes
+**** a) Get a list of all codes - get_codes
 
-As the list of all listed companies are likely to change, let's get the latest list from the HKEX page.
-
-**** b) Rewrite get_code function
+As the list of all listed companies are likely to change, let's get the latest one from the [[https://www.hkexnews.hk/sdw/search/stocklist_c.aspx?sortby=stockcode&shareholdingdate=20210621][HKEX]] page.
 
 #+BEGIN_SRC python
+  import bs4
+  import requests
+
+  res = requests.get("http://allevents.in/lahore/")
+  soup = bs4.BeautifulSoup(res.text)
+  for link in soup.select('a[property="schema:url"]'):
+              print link.get('href')
+
 #+END_SRC
 
-**** c) Accept date parameters
+**** b) Get individual stock - get_stock
+
+#+BEGIN_SRC python
+  def get_stock(num: int, nrow=10: int) -> pd.DataFrame:
+
+      """
+      Call Quandl API to get the historical data for the stock number
+
+      Args:
+          num (int): Stock num, e.g. 5
+          nrow (int): No of rows specified in the API calls. Default 10
+
+      Returns:
+          data (Dataframe): Dataframe returned from Quandl API
+
+      Example:
+          data = get_stock(num=1, nrow=10)
+
+      TODO:
+          Add date parameter to specify the latest date of the call
+
+      Data preview:
+                    NominalPrice NetChange Change    Bid    Ask   PEx   High    Low  PreviousClose  ShareVolume000  Turnover000 LotSize   code
+        Date
+        2019-03-19         80.45      None   None  80.40  80.45  None  81.15  80.20          80.95          7374.0     593781.0    None  00001
+        2019-03-20         82.50      None   None  82.50  82.55  None  83.30  80.30          80.45         12420.0    1018144.0    None  00001
+        2019-03-21         81.60      None   None  81.60  81.75  None  83.50  81.60          82.50         12224.0    1009254.0    None  00001
+        2019-03-22         83.80      None   None  83.75  83.80  None  84.65  82.85          81.60         13478.0    1124179.0    None  00001
+      """
+
+      code        = str(num).zfill(5)
+      code_str    = "HKEX/{}".format(code)  # e.g. HKEX/00005
+
+      try:
+              data = quandl.get(code_str, rows = nrow)
+              data['Code'] = code
+
+              col_name = data.columns.tolist()
+              clean_col_name = [re.sub(r'\W+','', x) for x in col_name]  # Replace special character in column name
+              col_dict = dict(zip(col_name, clean_col_name))
+
+              data.rename(columns=col_dict, inplace=True)
+              print("Finished getting code - {}".format(code))
+
+              return(data)
+
+      except Exception as e:
+              print("No record - {}".format(code))
+              print(e)
+
+#+END_SRC
+
+**** c) Get all stocks - get_all_stocks
+#+BEGIN_SRC python
+
+
+#+END_SRC
 
 **** d) Complete example
 
 The complete code example can be founded - [[][Here]]
 
-*** Setting a cron job
 
-_
-Reference
-- Photo by [Chris Liverani](https://unsplash.com/@chrisliverani?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/stock?utm_source=unsplash&utm_medium=referral&utm_content=
+*** Setting up a cron job
 
 
 *** Final Thoughts
 
-With the example here, you should be able to get a daily udpate of HKEX stock data for analysis. It would be quite easy to save the data into a DBMS like mysql or postgresql too.
+With the example here, you should be able to get a daily update of HKEX stock data for analysis. It would be quite easy to save the data into a DBMS like mysql or postgresql too.
 
-Happy Codding.
+Happy Coding.
 
 
 _
 
-Reference:
-- Reference Photo by []() on []()
+
+Reference
+- Photo by [Chris Liverani](https://unsplash.com/@chrisliverani?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/stock?utm_source=unsplash&utm_medium=referral&utm_content)
 
 
 
@@ -557,9 +703,9 @@ It also comes with some built-in support for documentation. You can easily gener
 
 *** Demo
 
-Writing docstrings might sound a lot of trouble at first. But it may not be as much as you think. Many modern IDE support some code snippets for you to define a template for code generation.
+Writing docstrings might sound a lot of trouble at first. But it may not be as much as you think. Many modern IDE supports some code snippets for you to define a template for code generation.
 
-Here is a quick demo on how I usually generate the docstrings with yasnippet. I group all my snippets starting with the letter ~s~ for snippets.
+Here is a quick demo on how I usually generate the docstrings with **yasnippet**. I group all my snippets starting with the letter ~s~ for snippets.
 - ~sifm~ prints the ~if __name__ == '__main__'~
 - ~sfn~ stands for snippet function, which generate a docstring snippet whenever I define a function.
 

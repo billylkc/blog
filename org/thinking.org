@@ -40,6 +40,63 @@ Reference
 - Photo by [Chris Liverani](https://unsplash.com/@chrisliverani?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/stock?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 
+** TODO Python debugger pdb
+
+:PROPERTIES:
+:EXPORT_FILE_NAME: python-debugger
+:EXPORT_DATE: 2021-06-21
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover
+:DESCRIPTION: Python Debugging with pdb. pde.
+:EXPORT_TITLE: Python Debugging with pdb
+:SUMMARY: Python Debugging with pdb
+:END:
+
+I don't know where you are, I don't know how you work. But I will find you, And.. \\
+
+I will fix you - TheRaxTon
+
+<!--more-->
+
+*** Introduction
+Nobody writes perfect code.
+
+Everyone has their own approach to debugging, but I’ve seen too many specialists try to spot bugs using basic things like print instead of actual debugging tools. Or even if they did use a debugging tool, they only used a small set of features and didn’t dig deeper into the wide range of opportunities good debuggers offer. And which could have saved those specialists a lot of time.
+
+
+*** pdb
+Cheatsheet
+
+Basic
+| Command     | Description                 |
+|-------------+-----------------------------|
+| **(h)** elp | List all available commands |
+| (q)uit      | Quit debug session          |
+
+Navigation and debug
+| Command                | Description           |
+|------------------------+-----------------------|
+| (l)ist                 | List a few lines      |
+| (ll)ong list           | List more lines       |
+|------------------------+-----------------------|
+| (n)ext                 | Move to next line     |
+| (s)tep                 | Step into function    |
+| <ENTER>                | repeat last command   |
+| (p)rint /expr/         | Print variable /expr/ |
+| (pp)retty print /expr/ | Pretty Print /expr/   |
+|------------------------+-----------------------|
+| (b)reak                | Show all break point  |
+| (b)reak /num/          | Set bp at line /num/  |
+| (c)ontinue             | Continue til next bp  |
+|------------------------+-----------------------|
+| locals()               | List local variables  |
+
+
+
+Reference: [[https://appletree.or.kr/quick_reference_cards/Python/Python%20Debugger%20Cheatsheet.pdf][Python Debugger Cheatseet]]
+
+*** Something
+
 ** DONE Python toolings
 :PROPERTIES:
 :EXPORT_FILE_NAME: python-toolings
