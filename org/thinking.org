@@ -8,7 +8,7 @@
 #+author: Billy Lam
 
 * Thinking
-** Get HKEX data with Quandl in Python
+** Getting HKEX data with Quandl in Python
 :PROPERTIES:
 :EXPORT_FILE_NAME: hkex-with-python
 :EXPORT_DATE: 2021-02-22
@@ -137,7 +137,7 @@ Results
 (To be added)
 
 
-** Docstrings
+** DONE Docstrings
 :PROPERTIES:
 :EXPORT_FILE_NAME: docstrings
 :EXPORT_DATE: 2021-02-22

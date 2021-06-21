@@ -12,6 +12,143 @@
 
 * Python                                                                :@python:python:
 
+** TODO Getting HKEX data with Quandl in Python                        :api:
+:PROPERTIES:
+:EXPORT_FILE_NAME: hkex-with-python
+:EXPORT_DATE: 2021-06-21
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover
+:DESCRIPTION: Getting HKEX data with Quandl in Python. Historical daily HKEX data using API. Yahoo Finance.
+:EXPORT_TITLE: Getting HKEX data with Quandl in Python
+:SUMMARY: Getting HKEX data with Quandl in Python
+:END:
+
+Free alternatives to get HKEX daily stock data after Yahoo Finance
+
+<!--more-->
+
+*** Introduction
+Free Quandl Stock API for HK stock data.
+
+Getting a stable source of daily stock data is all I wanted. But since Yahoo Finance shutdown their API, I have been using Quandl as an free alternatives. In this post, I will quickly show you how we can get some daily stock price data from HK Stock Exchange Market.
+
+*** Overview
+
+In this article, we will be covering the following topics
+
+- Introduction to Quandl Python API
+
+- Basic setup and quick exploration
+
+- Getting 10 days of records for all stocks
+
+- Set up a cron job to extract the data daily
+
+*** Quandl Python API
+**Quandl** is a marketplace for financial, economic and alternative data delivered in
+modern formats for today's financial analysts It provides free API (Python, Excel, Matlab, R, etc..) for registered users.
+
+You can register and get a free API key here - [Here]. The setup should be quite straight forward.
+
+Here is a usage table of the free tier for your reference. We will be using the free tier as an example here.
+
+| Tier | Requests per Day | Concurrent Request |
+|------+------------------+--------------------|
+| Free |                  | 1                  |
+
+*** Basic setup and quick exploration
+
+**** a) Install package
+
+#+BEGIN_EXAMPLE
+pip install quandl
+#+END_EXAMPLE
+
+**** b) Set up environment variable
+
+Given that the free API is not a 'secret' secret. Putting the token in an environment variable would serve the purpose of this short example.
+
+- Open your =~/.bashrc= and add the following line (Persistent)
+  #+BEGIN_SRC bash
+    # Inside .bashrc
+    export QUANDL_TOKEN="YOUR_API_TOKEN"
+  #+END_SRC
+
+  #+BEGIN_SRC bash
+    # In command line
+    source ~/.bashrc
+  #+END_SRC
+
+
+- Or simply run in the command line (One off)
+  #+BEGIN_SRC bash
+    export QUANDL_TOKEN="YOUR_API_TOKEN"
+  #+END_SRC
+
+**** c) Quick demo
+
+It is quite straight forward to get the data, just call it with the **stock code** ~HKEX/00005~ and ~quandl.get~.
+
+#+BEGIN_SRC python
+  import os
+  import requests
+  import pandas as pd
+  import quandl
+  import numpy as np
+
+  pd.set_option('display.max_columns', None)
+  quandl.ApiConfig.api_key = os.environ['QUANDL_TOKEN']
+
+  num = 5     # HSBC
+  code = str(num).zfill(5)
+  code_str = "HKEX/{}".format(code)
+  data = quandl.get(code_str, rows = 10)
+  data['code'] = code
+
+  print(data)
+
+#+END_SRC
+
+*** Getting data
+
+Let's extend our example and try to get **all** the stocks in the past 10 days.
+
+**** a) Get a list of all codes
+
+As the list of all listed companies are likely to change, let's get the latest list from the HKEX page.
+
+**** b) Rewrite get_code function
+
+#+BEGIN_SRC python
+#+END_SRC
+
+**** c) Accept date parameters
+
+**** d) Complete example
+
+The complete code example can be founded - [[][Here]]
+
+*** Setting a cron job
+
+_
+Reference
+- Photo by [Chris Liverani](https://unsplash.com/@chrisliverani?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/stock?utm_source=unsplash&utm_medium=referral&utm_content=
+
+
+*** Final Thoughts
+
+With the example here, you should be able to get a daily udpate of HKEX stock data for analysis. It would be quite easy to save the data into a DBMS like mysql or postgresql too.
+
+Happy Codding.
+
+
+_
+
+Reference:
+- Reference Photo by []() on []()
+
+
+
 ** Python Cheatsheet                                           :python:workflow:
 :PROPERTIES:
 :EXPORT_FILE_NAME: python-cheatsheet
@@ -418,6 +555,15 @@ It also comes with some built-in support for documentation. You can easily gener
 
 #+END_SRC
 
+*** Demo
+
+Writing docstrings might sound a lot of trouble at first. But it may not be as much as you think. Many modern IDE support some code snippets for you to define a template for code generation.
+
+Here is a quick demo on how I usually generate the docstrings with yasnippet. I group all my snippets starting with the letter ~s~ for snippets.
+- ~sifm~ prints the ~if __name__ == '__main__'~
+- ~sfn~ stands for snippet function, which generate a docstring snippet whenever I define a function.
+
+[[https://storage.googleapis.com/billylkc-blog-image/images/posts/10-docstrings/docstrings-o.gif]]
 
 *** Final Thoughts
 

@@ -2,15 +2,15 @@
 title = "What is docstrings?"
 author = ["Billy Lam"]
 date = 2021-06-19
-lastmod = 2021-06-19
+lastmod = 2021-06-21
 tags = ["python"]
 categories = ["python"]
 draft = false
-weight = 2002
+weight = 2003
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/10-docstrings/thumbnails.jpg"
 [menu.main]
-  weight = 2002
+  weight = 2003
   identifier = "what-is-docstrings"
 +++
 
@@ -136,6 +136,18 @@ func Add(x int, y int) int{
 	return x + y
 }
 ```
+
+
+## Demo {#demo}
+
+Writing docstrings might sound a lot of trouble at first. But it may not be as much as you think. Many modern IDE support some code snippets for you to define a template for code generation.
+
+Here is a quick demo on how I usually generate the docstrings with yasnippet. I group all my snippets starting with the letter `s` for snippets.
+
+-   `sifm` prints the `if __name__ == '__main__'`
+-   `sfn` stands for snippet function, which generate a docstring snippet whenever I define a function.
+
+{{< figure src="https://storage.googleapis.com/billylkc-blog-image/images/posts/10-docstrings/docstrings-o.gif" >}}
 
 
 ## Final Thoughts {#final-thoughts}
