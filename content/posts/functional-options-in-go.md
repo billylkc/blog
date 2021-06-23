@@ -2,11 +2,11 @@
 title = "Functional Options in Go"
 author = ["Billy Lam"]
 date = 2021-02-22
-lastmod = 2021-06-18
+lastmod = 2021-06-22
 tags = ["golang"]
 categories = ["golang"]
 draft = false
-weight = 2002
+weight = 100
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/4-functional-options/thumbnails.jpg"
 [menu.main]

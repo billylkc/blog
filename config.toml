@@ -6,7 +6,7 @@ theme = "dream"
 defaultContentLanguage = "en"
 headerTitle = "Another Data Science Blog"
 googleAnalytics = "260697059"
-# disqusShortname = "billylkc"
+disqusShortname = "billylkc"
 
 
 [params]

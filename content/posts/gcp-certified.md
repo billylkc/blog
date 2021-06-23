@@ -2,11 +2,11 @@
 title = "GCP certified"
 author = ["Billy Lam"]
 date = 2021-06-15
-lastmod = 2021-06-18
+lastmod = 2021-06-22
 tags = ["random"]
 categories = ["random"]
 draft = false
-weight = 2001
+weight = 50
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/7-GCP-certified/thumbnails.jpg"
 [menu.main]

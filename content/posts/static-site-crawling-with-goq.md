@@ -2,11 +2,11 @@
 title = "Static site crawling with goq"
 author = ["Billy Lam"]
 date = 2021-02-28
-lastmod = 2021-06-18
+lastmod = 2021-06-22
 tags = ["golang", "crawler"]
 categories = ["golang"]
 draft = false
-weight = 2001
+weight = 40
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/5-goq/thumbnails.jpg"
 [menu.main]

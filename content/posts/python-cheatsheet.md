@@ -2,15 +2,15 @@
 title = "Python Cheatsheet"
 author = ["Billy Lam"]
 date = 2021-06-17
-lastmod = 2021-06-17
+lastmod = 2021-06-22
 tags = ["python", "workflow"]
 categories = ["python"]
 draft = false
-weight = 2001
+weight = 30
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/9-cheatsheet/thumbnails.jpg"
 [menu.main]
-  weight = 2001
+  weight = 2003
   identifier = "python-cheatsheet"
 +++
 
@@ -20,8 +20,6 @@ Dont ask me about the syntax. I look it up on Google and API documentations. And
 
 
 ## Introduction {#introduction}
-
-> “Talk is cheap. Show me the code.” - Linus Torvalds
 
 If you are having trouble to remember the exact syntax no matter how many times you've used it, you are not alone.
 
@@ -127,7 +125,7 @@ Introducing the ultimate programming cheatsheet - **cheat.sh** ([Official Site](
     #  > args, kwargs : tuple and dict
     #  >> Optional positional and keyword arguments to pass to func
     #
-    #  Additional Args passed in "\*args" get passed _after_ the implict
+    #  Additional Args passed in "\*args" get passed _after_ the implicit
     #  group argument.
     #
     #  so using your code

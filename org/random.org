@@ -9,11 +9,12 @@
 
 * Random                                                              :@random:
 
-** GCP certified                                                    :random:
+** GCP certified                                                   :random:
 :PROPERTIES:
 :EXPORT_FILE_NAME: gcp-certified
 :EXPORT_DATE: 2021-06-15
 :EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_WEIGHT: 50
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/7-GCP-certified/thumbnails.jpg
 :DESCRIPTION: Google Cloud Architect certified
 :EXPORT_TITLE: GCP certified
@@ -79,6 +80,7 @@ Reference
 :EXPORT_FILE_NAME: a-short-break
 :EXPORT_DATE: 2021-03-09
 :EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_WEIGHT: 200
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/6-rest/thumbnails-2.jpg
 :DESCRIPTION: A short break
 :EXPORT_TITLE: A short break
@@ -105,6 +107,7 @@ Reference
 :EXPORT_FILE_NAME: why-this-blog
 :EXPORT_DATE: 2021-02-18
 :EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_WEIGHT: 40
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/data.jpg
 :DESCRIPTION: Why this blog?
 :EXPORT_TITLE: Why this blog?

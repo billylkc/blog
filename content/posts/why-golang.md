@@ -2,11 +2,11 @@
 title = "Why Golang?"
 author = ["Billy Lam"]
 date = 2021-02-03
-lastmod = 2021-06-18
+lastmod = 2021-06-22
 tags = ["golang"]
 categories = ["golang"]
 draft = false
-weight = 2004
+weight = 60
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/why-go.png"
 [menu.main]

@@ -2,11 +2,11 @@
 title = "A short break"
 author = ["Billy Lam"]
 date = 2021-03-09
-lastmod = 2021-06-18
+lastmod = 2021-06-22
 tags = ["random"]
 categories = ["random"]
 draft = false
-weight = 2002
+weight = 200
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/6-rest/thumbnails-2.jpg"
 [menu.main]

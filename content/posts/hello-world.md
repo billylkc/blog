@@ -2,11 +2,11 @@
 title = "My first go program"
 author = ["Billy Lam"]
 date = 2021-02-01
-lastmod = 2021-06-18
+lastmod = 2021-06-22
 tags = ["demo", "golang"]
 categories = ["demo"]
 draft = false
-weight = 2001
+weight = 500
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/hello_world.jpg"
 [menu.main]

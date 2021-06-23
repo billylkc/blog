@@ -2,11 +2,11 @@
 title = "Why this blog?"
 author = ["Billy Lam"]
 date = 2021-02-18
-lastmod = 2021-06-18
+lastmod = 2021-06-22
 tags = ["random"]
 categories = ["random"]
 draft = false
-weight = 2003
+weight = 40
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/data.jpg"
 [menu.main]

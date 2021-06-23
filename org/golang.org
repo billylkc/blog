@@ -17,6 +17,7 @@
 :EXPORT_FILE_NAME: static-site-crawling-with-goq
 :EXPORT_DATE: 2021-02-28
 :EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_WEIGHT: 40
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/5-goq/thumbnails.jpg
 :DESCRIPTION:  Static site crawling with goq
 :EXPORT_TITLE: Static site crawling with goq
@@ -273,6 +274,7 @@ _Reference_
 :EXPORT_FILE_NAME: functional-options-in-go
 :EXPORT_DATE: 2021-02-22
 :EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_WEIGHT: 100
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/4-functional-options/thumbnails.jpg
 :DESCRIPTION: Functional Options in Go
 :EXPORT_TITLE: Functional Options in Go
@@ -379,6 +381,7 @@ Reference: [[https://commandcenter.blogspot.com/2014/01/self-referential-functio
 :EXPORT_FILE_NAME: parse-json-api-response-in-Go
 :EXPORT_DATE: 2021-02-08
 :EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_WEIGHT: 80
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/parse-json.jpg
 :DESCRIPTION: Parse JSON API response in Go
 :EXPORT_TITLE: Parse JSON API response in Go
@@ -572,6 +575,7 @@ Reference Photo by [Goran Ivos](https://unsplash.com/@goran_ivos?utm_source=unsp
 :EXPORT_FILE_NAME: why-golang
 :EXPORT_DATE: 2021-02-03
 :EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_WEIGHT: 60
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/why-go.png
 :DESCRIPTION: Why Golang?
 :EXPORT_TITLE: Why Golang?
@@ -764,6 +768,7 @@ Some final thoughts
 :EXPORT_FILE_NAME: file-name
 :EXPORT_DATE: 2021-02-22
 :EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_WEIGHT: 1000
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/4-functional-options/thumbnails.jpg
 :DESCRIPTION: description
 :EXPORT_TITLE: description
