@@ -2,7 +2,7 @@
 title = "Static site crawling with goq"
 author = ["Billy Lam"]
 date = 2021-02-28
-lastmod = 2021-06-22
+lastmod = 2021-06-24
 tags = ["golang", "crawler"]
 categories = ["golang"]
 draft = false
@@ -254,7 +254,7 @@ Here is the source code - [Here](https://github.com/billylkc/blogposts/blob/5%5F
 
 ## Final thoughts {#final-thoughts}
 
-I have used many other packages in Python and Go, this is by far the easiest and most intuitive package for simple static site crawling.
+I have used many packages in Python and Go, this is by far the easiest package for simple static site crawling. You just need to define a goquery tag in the struct, then Voila, you get your content.
 
 Happy Coding!
 
