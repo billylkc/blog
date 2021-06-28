@@ -2,7 +2,7 @@
 title = "Getting HKEX data with Quandl in Python"
 author = ["Billy Lam"]
 date = 2021-06-21
-lastmod = 2021-06-24
+lastmod = 2021-06-25
 tags = ["python", "api"]
 categories = ["python"]
 draft = false
@@ -307,15 +307,14 @@ def get_all_stock(nrow: int = 10) -> pd.DataFrame:
 
     # Initialize result dataframe
     result = pd.DataFrame()
-
     for code in codes:
 	    try:
-		   data = get_stock(code, nrow)
-		   result = pd.concat([result, data], sort=True)
+		    data = get_stock(code, nrow)
+		    result = pd.concat([result, data], sort=True)
 
 	    except Exception as e:
-		   print("No records")
-		   print(e)
+		    print("No records")
+		    print(e)
 
     return result
 ```

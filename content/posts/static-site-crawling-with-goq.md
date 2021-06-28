@@ -2,7 +2,7 @@
 title = "Static site crawling with goq"
 author = ["Billy Lam"]
 date = 2021-02-28
-lastmod = 2021-06-24
+lastmod = 2021-06-25
 tags = ["golang", "crawler"]
 categories = ["golang"]
 draft = false
@@ -19,12 +19,30 @@ Easy static site crawling with goq
 <!--more-->
 
 
+## Introduction {#introduction}
+
+> We get it. You want the data, not the headache.
+
+A robust web scrapers helps you to extract data from websites, saving you time on some tedious data collection tasks. It also allows you to make smarter decisions with the insights discovered from the captured data.
+
+Here are some of the common use cases with web crawlers.
+
+-   Sentiment analysis on social media
+-   Price tracking
+-   Content Aggregation
+-   Product data enrichment
+-   Brand Monitoring
+-   etc..
+
+In this article we will introduce a package in Go (`goq`) to crawl some static websites.
+
+
 ## Usage {#usage}
 
 Basically, what you have to do is 3 things.
 
--   Study the ****static page**** (Not dynamically loaded content with javascript) and identify the elements with css selector
--   Construct a golang struct with the goquery tag (e.g. `` `goquery:"div p`" ``)
+-   Study the ****static page**** (Not dynamic content loaded with Javascript) and identify the elements with css selector
+-   Construct a golang `struct` with the goquery tag (e.g. `` `goquery:"div p`" ``)
 -   Decode into a struct with `goq.NewDecorder`
 
 
@@ -87,12 +105,12 @@ func PrettyPrint(i interface{}) string {
 
 ## Other Demo {#other-demo}
 
-The following demos are strictly for illustration purposes. Do check the `robots.txt` file of each site and crawl responsibly.
+The following demos are for illustration purposes. Do check the `robots.txt` file of each site and crawl responsibly.
 
 
 ### a) Wikipedia {#a-wikipedia}
 
-Let say we want to create a program that will retrieve the first 3 paragraphs of the keyword (e.g. Linear regression) that we provide. Here are some key steps.
+Let say we want to create a program that retrieves the first 3 paragraphs of the keyword (e.g. Linear regression) that we provide. Here are some key steps.
 
 1.  Study the ****css selector**** of the info that we need
 
@@ -170,7 +188,7 @@ You can find out the full code example - [Here](https://github.com/billylkc/blog
 
 ### b) OpenRice {#b-openrice}
 
-Similarly for OpenRice. You can easily check that the css selector for title would be `div.cms-detail-title.or-font-family` and content as `div.cms-detail-body-text div`.
+And for OpenRice. You can easily check that the css selector for title would be `div.cms-detail-title.or-font-family` and content as `div.cms-detail-body-text div`.
 
 Full code
 
@@ -254,13 +272,13 @@ Here is the source code - [Here](https://github.com/billylkc/blogposts/blob/5%5F
 
 ## Final thoughts {#final-thoughts}
 
-I have used many packages in Python and Go, this is by far the easiest package for simple static site crawling. You just need to define a goquery tag in the struct, then Voila, you get your content.
+I have used many packages in Python and Go, this is by far the easiest package for static site crawling. All you have to do is to define a goquery tag in the struct, then Voila, you get your content.
 
 Happy Coding!
 
 \_
 
-<span class="underline">Reference</span>
+Reference
 
 -   [andrewstuart/goq](https://github.com/andrewstuart/goq)
 -   Photo by [Jean Carcallas](<https://unsplash.com/@jean8carcallas?utm%5Fsource=unsplash&utm%5Fmedium=referral&utm%5Fcontent=creditCopyText>) on [Unsplash](<https://unsplash.com/s/photos/capture?utm%5Fsource=unsplash&utm%5Fmedium=referral&utm%5Fcontent=creditCopyText>)
