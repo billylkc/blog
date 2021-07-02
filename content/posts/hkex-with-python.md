@@ -2,7 +2,7 @@
 title = "Getting HKEX data with Quandl in Python"
 author = ["Billy Lam"]
 date = 2021-06-21
-lastmod = 2021-06-25
+lastmod = 2021-06-29
 tags = ["python", "api"]
 categories = ["python"]
 draft = false
@@ -10,7 +10,7 @@ weight = 30
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/11-quandl/thumbnails.jpg"
 [menu.main]
-  weight = 2002
+  weight = 2003
   identifier = "getting-hkex-data-with-quandl-in-python"
 +++
 
@@ -262,36 +262,35 @@ def get_stock(num: int, nrow: int = 10) -> pd.DataFrame:
       2019-03-21         81.60      None   None  81.60  81.75  None  83.50  81.60          82.50         12224.0    1009254.0    None  00001
       2019-03-22         83.80      None   None  83.75  83.80  None  84.65  82.85          81.60         13478.0    1124179.0    None  00001
     """
-
     today = datetime.today().strftime("%Y-%m-%d")  # e.g. 2021-06-23
     code = str(num).zfill(5)
     code_str = "HKEX/{}".format(code)  # e.g. HKEX/00005
 
-    try:
-	    endpoint = "https://www.quandl.com/api/v3/datasets/{}/data.csv?limit={}&end_date={}&order={}&api_key={}".format(
-		    code_str,
-		    nrow,
-		    today,
-		    "desc",
-		    quandl.ApiConfig.api_key,
-	    )
-	    r = requests.get(endpoint).content
-	    data = pd.read_csv(io.StringIO(r.decode("utf-8")))
+    # Get from csv
+    endpoint = "https://www.quandl.com/api/v3/datasets/{}/data.csv?limit={}&end_date={}&order={}&api_key={}".format(
+	    code_str,
+	    nrow,
+	    today,
+	    "desc",
+	    quandl.ApiConfig.api_key,
+    )
+    r = requests.get(endpoint).content
+    data = pd.read_csv(io.StringIO(r.decode("utf-8")))
 
-	    data['Code'] = code
+    data["Code"] = code
 
-	    col_name = data.columns.tolist()
-	    clean_col_name = [re.sub(r'\W+', '', x) for x in col_name]  # Replace special character in column name
-	    col_dict = dict(zip(col_name, clean_col_name))
+    # Check if there is any error message
+    col_name = data.columns.tolist()
+    if "message" in col_name:
+	    raise Exception("Incorrect stock code - {}".format(code))
 
-	    data.rename(columns=col_dict, inplace=True)
-	    print("Finished getting code - {}".format(code))
+    clean_col_name = [re.sub(r"\W+", "", x) for x in col_name]  # Replace special character in column name
+    col_dict = dict(zip(col_name, clean_col_name))
 
-	    return(data)
+    data.rename(columns=col_dict, inplace=True)
+    print("Finished getting code - {}".format(code))
 
-    except Exception as e:
-	    print("No records - {}".format(code))
-	    print(e)
+    return data
 ```
 
 
@@ -409,33 +408,31 @@ def get_stock(num: int, nrow: int = 10) -> pd.DataFrame:
     code = str(num).zfill(5)
     code_str = "HKEX/{}".format(code)  # e.g. HKEX/00005
 
-    try:
-	    endpoint = "https://www.quandl.com/api/v3/datasets/{}/data.csv?limit={}&end_date={}&order={}&api_key={}".format(
-		    code_str,
-		    nrow,
-		    today,
-		    "desc",
-		    quandl.ApiConfig.api_key,
-	    )
-	    r = requests.get(endpoint).content
-	    data = pd.read_csv(io.StringIO(r.decode("utf-8")))
+    # Get from csv
+    endpoint = "https://www.quandl.com/api/v3/datasets/{}/data.csv?limit={}&end_date={}&order={}&api_key={}".format(
+	    code_str,
+	    nrow,
+	    today,
+	    "desc",
+	    quandl.ApiConfig.api_key,
+    )
+    r = requests.get(endpoint).content
+    data = pd.read_csv(io.StringIO(r.decode("utf-8")))
 
-	    data["Code"] = code
+    data["Code"] = code
 
-	    col_name = data.columns.tolist()
-	    clean_col_name = [
-		    re.sub(r"\W+", "", x) for x in col_name
-	    ]  # Replace special character in column name
-	    col_dict = dict(zip(col_name, clean_col_name))
+    # Check if there is any error message
+    col_name = data.columns.tolist()
+    if "message" in col_name:
+	    raise Exception("Incorrect stock code - {}".format(code))
 
-	    data.rename(columns=col_dict, inplace=True)
-	    print("Finished getting code - {}".format(code))
+    clean_col_name = [re.sub(r"\W+", "", x) for x in col_name]  # Replace special character in column name
+    col_dict = dict(zip(col_name, clean_col_name))
 
-	    return data
+    data.rename(columns=col_dict, inplace=True)
+    print("Finished getting code - {}".format(code))
 
-    except Exception as e:
-	    print("No records - {}".format(code))
-	    print(e)
+    return data
 
 
 def get_all_stock(nrow: int = 10) -> pd.DataFrame:
@@ -474,6 +471,10 @@ if __name__ == "__main__":
 ```
 
 The complete code example can be found - [Here](https://github.com/billylkc/blogposts/blob/6%5Fquandl%5Fpy/main.py)
+
+**Demo** <br />
+
+{{< figure src="https://storage.googleapis.com/billylkc-blog-image/images/posts/11-quandl/demo-q.gif" >}}
 
 
 ## Final Thoughts {#final-thoughts}

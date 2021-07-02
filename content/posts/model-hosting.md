@@ -2,7 +2,7 @@
 title = "Hosting a keyword extraction model with Flask and FastAPI"
 author = ["Billy Lam"]
 date = 2021-06-28
-lastmod = 2021-06-28
+lastmod = 2021-06-29
 tags = ["python", "api", "model"]
 categories = ["python"]
 draft = true
@@ -39,12 +39,12 @@ In this post, we will be covering the following topics
 -   FastAPI
 -   Testing with Postman
 
-At the end of this post, we will have an endpoint (served from `localhost`) to **extract 10 keywords from a text paragraph** that we provided with a simple POST requests.
+At the end of this post, we will have an endpoint (served from `localhost`) to **extract 20 keywords from a text paragraph** that we provided with a simple POST requests.
 
 
 ## Yet Another Keyword Extractor {#yet-another-keyword-extractor}
 
-YAKE (Yet Another Keyword Extractor) is a **light-weight unsupervised automatic keyword extraction method** which rests on **text statistical features** extracted from single document to select the most important keywords of a text.
+YAKE (Yet Another Keyword Extractor) is a **light-weight unsupervised automatic keyword extraction method**. It rests on **text statistical features** extracted from single document to select the most important keywords of a text.
 
 It is quite useful to extract details from a text paragraph or use as an alternatives to labeled data.
 
@@ -108,6 +108,8 @@ pip install yake
 ```python
 import yake
 def ExtractKeywords(text):
+    """ Extract 20 keywords from the input text """
+
     language = "en"
     max_ngram_size = 2
     deduplication_thresold = 0.3
@@ -153,32 +155,80 @@ pip install flask
 
 ```python
 from flask import Flask, request
+import yake
+
 app = Flask(__name__)
+
+def ExtractKeywords(text):
+    """ Extract 20 keywords from the input text """
+
+    language = "en"
+    max_ngram_size = 2
+    deduplication_thresold = 0.3
+    deduplication_algo = "seqm"
+    windowSize = 1
+    numOfKeywords = 20
+
+    custom_kw_extractor = yake.KeywordExtractor(
+	    lan=language,
+	    n=max_ngram_size,
+	    dedupLim=deduplication_thresold,
+	    dedupFunc=deduplication_algo,
+	    windowsSize=windowSize,
+	    top=numOfKeywords,
+	    features=None,
+    )
+    kws = custom_kw_extractor.extract_keywords(text)
+    keywords = [x[0] for x in kws]  # kws is in tuple format, extract the text part
+
+    return keywords
 
 @app.route('/keywords', methods = ['POST', 'GET'])
 def keywords():
-    if request.method == 'POST':
-	text = request.form['text']
-	keywords = ExtractKeywords(text)
-	return keywords
+    if request.method == "POST":
+	    json_data = request.json
+	    text = json_data["text"]
+	    kws = ExtractKeywords(text)
+
+	    # return a dictionary
+	    d = {"keyowrds": kws}
+	    return d
+
+    elif request.method == "GET":
+	    response = """
+	    Extract 20 keywords from a long text. Try with curl command. <br/><br/><br/>
+
+	    curl -X POST http://127.0.0.1:2005/keywords -H 'Content-Type: application/json' \
+	    -d '{"text": "Logistic regression is a statistical model that in its basic form uses a logistic function to model a binary dependent variable, although many more complex extensions exist. In regression analysis, logistic regression[1] (or logit regression) is estimating the parameters of a logistic model (a form of binary regression). Mathematically, a binary logistic model has a dependent variable with two possible values, such as pass/fail which is represented by an indicator variable, where the two values are labeled 0 and 1. In the logistic model, the log-odds (the logarithm of the odds) for the value labeled 1 is a linear combination of one or more independent variables (predictors); the independent variables can each be a binary variable (two classes, coded by an indicator variable) or a continuous variable (any real value). The corresponding probability of the value labeled 1 can vary between 0 (certainly the value 0) and 1 (certainly the value 1), hence the labeling; the function that converts log-odds to probability is the logistic function, hence the name. The unit of measurement for the log-odds scale is called a logit, from logistic unit, hence the alternative names. Analogous models with a different sigmoid function instead of the logistic function can also be used, such as the probit model; the defining characteristic of the logistic model is that increasing one of the independent variables multiplicatively scales the odds of the given outcome at a constant rate, with each independent variable having its own parameter; for a binary dependent variable this generalizes the odds ratio."}'
+	    """
+	    return response
+
     else:
-	return "Something"
+	    return "Not supported"
+
+
 
 if __name__ == '__main__':
-    app.run(debug = True)
+    app.run(host="0.0.0.0", port=2000, debug=True)
 ```
 
--   Host the server with port `localhost:7000`
+-   Host the server with port 2000 `app.run(host="0.0.0.0", port=2000, debug=True)`
+
+<!--listend-->
+
+```bash
+python main.py
+```
 
 Reference - [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 
 
 ## Testing with curl {#testing-with-curl}
 
-Let's use a paragraph from wikipedia of the `Logistic Regression` page as an input of our curl command and pass it as argument `text`.
+Let's use a paragraph from wikipedia of the `Logistic Regression` page as an input of our curl command and pass it as argument `text` (Double quote removed).
 
 ```bash
-curl -X POST http://127.0.0.1:2005/keywords_two -H 'Content-Type: application/json' \
+curl -X POST http://127.0.0.1:2000/keywords_two -H 'Content-Type: application/json' \
   -d '{
   "text": "Logistic regression is a statistical model that in its basic form uses a logistic function to model a binary dependent variable, although many more complex extensions exist. In regression analysis, logistic regression[1] (or logit regression) is estimating the parameters of a logistic model (a form of binary regression). Mathematically, a binary logistic model has a dependent variable with two possible values, such as pass/fail which is represented by an indicator variable, where the two values are labeled 0 and 1. In the logistic model, the log-odds (the logarithm of the odds) for the value labeled 1 is a linear combination of one or more independent variables (predictors); the independent variables can each be a binary variable (two classes, coded by an indicator variable) or a continuous variable (any real value). The corresponding probability of the value labeled 1 can vary between 0 (certainly the value 0) and 1 (certainly the value 1), hence the labeling; the function that converts log-odds to probability is the logistic function, hence the name. The unit of measurement for the log-odds scale is called a logit, from logistic unit, hence the alternative names. Analogous models with a different sigmoid function instead of the logistic function can also be used, such as the probit model; the defining characteristic of the logistic model is that increasing one of the independent variables multiplicatively scales the odds of the given outcome at a constant rate, with each independent variable having its own parameter; for a binary dependent variable this generalizes the odds ratio."
 }'
@@ -218,7 +268,7 @@ The result is actually quite good given its unsupervised nature. We can see some
 
 ## FastAPI {#fastapi}
 
-Another popular package to host API endpoints is **FastAPI**. FastAPI is a modern, fast and popular web framework for building APIs based on standard Python type hints. It is a high performant package, and it is on par with some popular framework written in ****NodeJS**** and ****Go****.
+Apart from Flask that we just introduced, there is another popular package to host API endpoints **FastAPI**. FastAPI is a modern, fast and popular web framework for building APIs based on standard Python type hints. It is a high performant package, and it is on par with some popular framework written in ****NodeJS**** and ****Go****.
 
 -   Code
 
@@ -242,6 +292,8 @@ class Response(BaseModel):
 app = FastAPI()
 
 def ExtractKeywords(text):
+    """ Extract 20 keywords from the input text """
+
     language = "en"
     max_ngram_size = 2
     deduplication_thresold = 0.3

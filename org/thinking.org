@@ -279,6 +279,24 @@ Some short description
 <!--more-->
 
 
+** TODO Count object with opencv
+:PROPERTIES:
+:EXPORT_FILE_NAME: file-name
+:EXPORT_DATE: 2021-02-22
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_WEIGHT: 100
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover
+:DESCRIPTION: description
+:EXPORT_TITLE: description
+:SUMMARY: description
+:END:
+
+Some short description
+
+<!--more-->
+
+Reference: https://www.askpython.com/python/examples/count-objects-in-an-image
+
 ** TODO Empty template
 :PROPERTIES:
 :EXPORT_FILE_NAME: file-name
