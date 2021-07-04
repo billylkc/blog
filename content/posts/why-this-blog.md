@@ -2,7 +2,7 @@
 title = "Why this blog?"
 author = ["Billy Lam"]
 date = 2021-02-18
-lastmod = 2021-06-22
+lastmod = 2021-07-04
 tags = ["random"]
 categories = ["random"]
 draft = false

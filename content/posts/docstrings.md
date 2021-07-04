@@ -2,7 +2,7 @@
 title = "What is docstrings?"
 author = ["Billy Lam"]
 date = 2021-06-19
-lastmod = 2021-06-22
+lastmod = 2021-07-04
 tags = ["python"]
 categories = ["python"]
 draft = false
@@ -10,7 +10,7 @@ weight = 40
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/10-docstrings/thumbnails.jpg"
 [menu.main]
-  weight = 2004
+  weight = 2005
   identifier = "what-is-docstrings"
 +++
 

@@ -2,7 +2,7 @@
 title = "My first go program"
 author = ["Billy Lam"]
 date = 2021-02-01
-lastmod = 2021-06-22
+lastmod = 2021-07-04
 tags = ["demo", "golang"]
 categories = ["demo"]
 draft = false

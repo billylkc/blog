@@ -2,7 +2,7 @@
 title = "GCP certified"
 author = ["Billy Lam"]
 date = 2021-06-15
-lastmod = 2021-06-22
+lastmod = 2021-07-04
 tags = ["random"]
 categories = ["random"]
 draft = false

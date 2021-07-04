@@ -2,7 +2,7 @@
 title = "Getting HKEX data with Quandl in Python"
 author = ["Billy Lam"]
 date = 2021-06-21
-lastmod = 2021-06-29
+lastmod = 2021-07-04
 tags = ["python", "api"]
 categories = ["python"]
 draft = false

@@ -2,7 +2,7 @@
 title = "Python Cheatsheet"
 author = ["Billy Lam"]
 date = 2021-06-17
-lastmod = 2021-06-22
+lastmod = 2021-07-04
 tags = ["python", "workflow"]
 categories = ["python"]
 draft = false
@@ -10,7 +10,7 @@ weight = 30
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/9-cheatsheet/thumbnails.jpg"
 [menu.main]
-  weight = 2003
+  weight = 2004
   identifier = "python-cheatsheet"
 +++
 

@@ -2,7 +2,7 @@
 title = "Parse JSON API response in Go"
 author = ["Billy Lam"]
 date = 2021-02-08
-lastmod = 2021-06-22
+lastmod = 2021-07-04
 tags = ["golang", "api"]
 categories = ["golang"]
 draft = false
@@ -10,7 +10,7 @@ weight = 80
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/parse-json.jpg"
 [menu.main]
-  weight = 2003
+  weight = 2004
   identifier = "parse-json-api-response-in-go"
 +++
 
