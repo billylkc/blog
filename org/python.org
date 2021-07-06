@@ -413,33 +413,35 @@ I will fix you - TheRaxTon
 
 The only way to be a zero bug programmer is to **not write any code**.
 
-All jokes aside, tooling plays an important roles in debugging. I’ve seen many practitioners try to spot bugs using only print statements instead of actual debugging tools. Sometimes it is personal preference, and sometimes it is just no one has introduced one to them before.
+All jokes aside, tooling plays an important roles in debugging. I’ve seen many practitioners try to spot bugs using only print statements instead of actual debugging tools. Sometimes it is a personal preference, but sometimes you just do not know it exists.
 
 This post is a gentle introduction of the debugging tools ~pdb~ and ~debugging mode~ in Visual Studio Code. Hopefully you will have a better understanding on what functionalities a good debugger offers.
-
+*** Functionalities
 *** pdb
 
 The Python debugger ~pdb~ implements an **interactive debugging environment** that you can use with any of your programs written in Python.
 
 With features that let you pause your program, look at what values your variables are set to, and go through program execution in a discrete step-by-step manner, you can more fully understand what your program is doing and find bugs that exist in the logic or troubleshoot known issues.
 
-Cheatsheet
+Here is a little Cheatsheet.
 
 Basic
 #+CAPTION: Basic commands
 #+ATTR_HTML: :class table table-striped table-dark
-| Command      | Description                 |
-|--------------+-----------------------------|
-| **(h)** help | List all available commands |
-| **(q)** quit | Quit debug session          |
+| Command               | Description                 |
+|-----------------------+-----------------------------|
+| **(h)** help          | List all available commands |
+| **(q)** quit          | Quit debug session          |
+| **(l)** list          | List a few lines            |
+| **(b 10)** breakpoint | Set break point at line 10  |
+
 
 #+CAPTION: Navigation and debugging
 | Command                          | Description                   |
 |----------------------------------+-------------------------------|
 | **(l)** list                     | List a few lines              |
-| **(ll)** long list               | List more lines               |
-|----------------------------------+-------------------------------|
 | **(n)** next                     | Move to next line             |
+|----------------------------------+-------------------------------|
 | **(s)** step                     | Step into function            |
 | **(j)** jump                     | Jump                          |
 | **ENTER**                        | Repeat last command           |
@@ -507,7 +509,7 @@ In this article, we will be covering the following topics
 *** Quandl Python API
 **Quandl** is a marketplace for financial, economic and alternative data delivered in modern formats for today's financial analysts. It provides free API (Python, Excel, Matlab, R, etc..) for registered users. You can register and get a **free API key** - [[https://www.quandl.com/sign-up][Here]]. The setup should be quite straight forward.
 
-Here is a usage table of the free tier for your reference. We will be using the free tier as an example
+Here is an usage table of the free tier for your reference. We will be using the free tier as an example.
 
 #+CAPTION: Rate Limits
 |---------+-------------------+--------------------|

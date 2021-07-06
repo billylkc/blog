@@ -2,7 +2,7 @@
 title = "Getting HKEX data with Quandl in Python"
 author = ["Billy Lam"]
 date = 2021-06-21
-lastmod = 2021-07-04
+lastmod = 2021-07-05
 tags = ["python", "api"]
 categories = ["python"]
 draft = false
@@ -41,7 +41,7 @@ In this article, we will be covering the following topics
 
 ****Quandl**** is a marketplace for financial, economic and alternative data delivered in modern formats for today's financial analysts. It provides free API (Python, Excel, Matlab, R, etc..) for registered users. You can register and get a ****free API key**** - [Here](https://www.quandl.com/sign-up). The setup should be quite straight forward.
 
-Here is a usage table of the free tier for your reference. We will be using the free tier as an example
+Here is an usage table of the free tier for your reference. We will be using the free tier as an example.
 
 <div class="table-caption">
   <span class="table-number">Table 1</span>:

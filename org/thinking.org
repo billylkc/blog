@@ -297,6 +297,17 @@ Some short description
 
 Reference: https://www.askpython.com/python/examples/count-objects-in-an-image
 
+
+** TODO Plotnine
+
+** TODO Math plus code(???)
+- linear regression
+- svd
+
+** I quant HK
+age group
+https://ourworldindata.org/grapher/historic-and-un-pop-projections-by-age?country=~HKG
+
 ** TODO Empty template
 :PROPERTIES:
 :EXPORT_FILE_NAME: file-name
