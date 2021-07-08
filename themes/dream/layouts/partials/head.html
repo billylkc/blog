@@ -13,6 +13,9 @@
 <meta name="keywords" content="{{ .Site.Params.keywords }}" />
 <meta name="image" content="{{ .Site.Params.image }}" />
 <meta name="robots" content="index, follow" />
+
+{{ if .Site.Params.gtm_id}}{{- partial "gtm.html" . }}{{ end }}
+
 {{ end }}
 
 <!-- Site Generator -->

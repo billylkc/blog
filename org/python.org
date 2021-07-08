@@ -390,16 +390,17 @@ Reference:
 
 
 
-** TODO Python debugger pdb                                       :workflow:
+** TODO Definitive guide to python debugging with pdb and VS Code   :workflow:
 :PROPERTIES:
 :EXPORT_FILE_NAME: python-debugger
 :EXPORT_DATE: 2021-06-21
 :EXPORT_HUGO_MENU: :menu "main"
 :EXPORT_HUGO_WEIGHT: 15
 :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover
-:DESCRIPTION: Python Debugging with pdb.
-:EXPORT_TITLE: Python Debugging with pdb
-:SUMMARY: Python Debugging with pdb
+:DESCRIPTION: Definitive guide to python debugging with pdb and VS Code for Data Scientist.
+:EXPORT_TITLE: Definitive guide to python debugging with pdb and VS Code for Data Scientist.
+:SUMMARY: Definitive guide to python debugging with pdb and VS Code for Data Scientist.
+
 :END:
 
 I don't know where you are, I don't know how you work. But I will find you, And.. \\
@@ -411,11 +412,14 @@ I will fix you - TheRaxTon
 
 *** Introduction
 
-The only way to be a zero bug programmer is to **not write any code**.
+The only way to be a zero bug programmer is to **not write any code**. No Cap.
 
-All jokes aside, tooling plays an important roles in debugging. I’ve seen many practitioners try to spot bugs using only print statements instead of actual debugging tools. Sometimes it is a personal preference, but sometimes you just do not know it exists.
+Tooling plays an important roles in debugging.
+
+I’ve seen many practitioners try to spot bugs using only print statements instead of actual debugging tools. Sometimes it is a personal preference, but sometimes you just do not know it exists.
 
 This post is a gentle introduction of the debugging tools ~pdb~ and ~debugging mode~ in Visual Studio Code. Hopefully you will have a better understanding on what functionalities a good debugger offers.
+
 *** Functionalities
 *** pdb
 

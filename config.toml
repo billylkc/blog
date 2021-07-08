@@ -6,12 +6,13 @@ theme = "dream"
 defaultContentLanguage = "en"
 headerTitle = "Another Data Science Blog"
 googleAnalytics = "260697059"
-
+paginate = 14
 
 [params]
   background = "#fff"
   backgroundImage = "https://storage.googleapis.com/billylkc-blog-image/images/background_3.jpg"
   linkColor = "seagreen"
+  gtm_id = "GTM-WVJS63K"
 
   # dark mode
   defaultDark = false
