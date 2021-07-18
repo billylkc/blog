@@ -2,7 +2,7 @@
 title = "Getting HKEX data with Quandl in Python"
 author = ["Billy Lam"]
 date = 2021-06-21
-lastmod = 2021-07-05
+lastmod = 2021-07-12
 tags = ["python", "api"]
 categories = ["python"]
 draft = false
@@ -10,7 +10,7 @@ weight = 30
 nolastmod = true
 cover = "https://storage.googleapis.com/billylkc-blog-image/images/posts/11-quandl/thumbnails.jpg"
 [menu.main]
-  weight = 2003
+  weight = 2002
   identifier = "getting-hkex-data-with-quandl-in-python"
 +++
 

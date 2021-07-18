@@ -1,0 +1,102 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /Git/hugo/blog/org/python.org
+
+
+* TODO Definitive guide to python debugging with pdb and VS Code   :workflow:
+  :PROPERTIES:
+  :EXPORT_FILE_NAME: python-debugging-with-pdb
+  :EXPORT_DATE: 2021-07-12
+  :EXPORT_HUGO_MENU: :menu "main"
+  :EXPORT_HUGO_WEIGHT: 20
+  :EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/11-quandl/thumbnails.jpg
+  :DESCRIPTION: Definitive guide to python debugging with pdb and Visual Studio Code for Data Scientist.
+  :EXPORT_TITLE: Definitive guide to python debugging with pdb and Visual Studio ode
+  :SUMMARY:  Definitive guide to python debugging with pdb
+  :ARCHIVE_TIME: 2021-07-12 Mon 06:19
+  :ARCHIVE_FILE: /Git/hugo/blog/org/python.org
+  :ARCHIVE_OLPATH: Python
+  :ARCHIVE_CATEGORY: python
+  :ARCHIVE_TODO: TODO
+  :ARCHIVE_ITAGS: @python python
+  :END:
+
+I don't know where you are, I don't know how you work. But I will find you, And.. \\
+
+
+I will fix you - TheRaxTon
+
+<!--more-->
+
+** Introduction
+
+The only way to be a zero bug programmer is to **not write any code**. No Cap.
+
+Tooling plays an important roles in debugging. It is like you can do all your calculation with a pen, it is just easier with a calculator.
+
+This post is a gentle introduction of the debugging tools ~pdb~ and ~debugging mode~ in Visual Studio Code. Hopefully you will have a better understanding on what functionalities a good debugger offers.
+
+** Overview
+In this post, we will be covering the following topics
+- Create a group by function for debugging
+- Introduction to pdb
+- pdb emo
+- Debugging in visual studio code
+- Debug mode Demo
+** Create a group by function for debugging
+
+** pdb
+
+The Python debugger ~pdb~ implements an **interactive debugging environment** that you can use with any of your programs written in Python.
+
+With features that let you pause your program, look at what values your variables are set to, and go through program execution in a discrete step-by-step manner, you can more fully understand what your program is doing and find bugs that exist in the logic or troubleshoot known issues.
+
+Here is a little Cheatsheet.
+
+Basic
+#+CAPTION: Basic commands
+#+ATTR_HTML: :class table table-striped table-dark
+| Command               | Description                 |
+|-----------------------+-----------------------------|
+| **(h)** help          | List all available commands |
+| **(q)** quit          | Quit debug session          |
+| **(l)** list          | List a few lines            |
+| **(b 10)** breakpoint | Set break point at line 10  |
+
+
+#+CAPTION: Navigation and debugging
+| Command                          | Description                   |
+|----------------------------------+-------------------------------|
+| **(l)** list                     | List a few lines              |
+| **(n)** next                     | Move to next line             |
+|----------------------------------+-------------------------------|
+| **(s)** step                     | Step into function            |
+| **(j)** jump                     | Jump                          |
+| **ENTER**                        | Repeat last command           |
+| **(p)** print **/expr/**         | Print variable /expr/         |
+| **(pp)** pretty print **/expr/** | Pretty Print /expr/           |
+|----------------------------------+-------------------------------|
+| **(b)** break                    | Show all break point          |
+| **(b)** break **/num/**          | Set break point at line /num/ |
+| **(c)** continue                 | Continue til next break point |
+|----------------------------------+-------------------------------|
+| **locals()**                     | List local variables          |
+
+Reference: [[https://appletree.or.kr/quick_reference_cards/Python/Python%20Debugger%20Cheatsheet.pdf][Python Debugger Cheatsheet]]
+
+** Demo
+
+** Debugging in visual studio code
+** Final thoughts
+
+By now you should have a basic understanding of how debugging works in Python, as well as the tools available in pdb in standard library, to graphical debugging in IDE like visual studio code. Using a debugger for your own codebases is really going to supercharge your productivity.
+
+
+Happy Coding!
+
+
+_
+
+Reference:
+-
