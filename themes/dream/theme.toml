@@ -4,7 +4,7 @@
 name = "Dream"
 license = "MIT"
 licenselink = "https://github.com/g1eny0ung/hugo-theme-dream/blob/master/LICENSE"
-description = "Another Data Science Blog"
+description = "Fullstack Data Science Blog"
 homepage = "http://billylkc.com/"
 tags = ["flip", "masonry layout", "i18n", "blog", "google-analytics", "disqus", "responsive", "copyright", "avatar", "motto", "social links", "creative", "personal", "light mode", "dark mode", "search"]
 features = ["flip", "masonry layout", "i18n", "blog", "google-analytics", "disqus", "responsive", "copyright", "avatar", "motto", "social links", "creative", "personal", "light mode", "dark mode", "search"]

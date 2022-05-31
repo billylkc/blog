@@ -411,6 +411,7 @@ You can find the complete working example in - [[https://github.com/billylkc/blo
 
 Reference: [[https://commandcenter.blogspot.com/2014/01/self-referential-functions-and-design.html][Self-referential functions and the design of options]]
 
+
 ** Parse JSON API response in Go                                :golang:api:
 :PROPERTIES:
 :EXPORT_FILE_NAME: parse-json-api-response-in-Go

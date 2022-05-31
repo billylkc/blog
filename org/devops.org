@@ -1,0 +1,34 @@
+#+STARTUP: content
+#+OPTIONS: \n:t
+#+OPTIONS: ^:{}
+#+HTML_HEAD: <base target="_blank">
+#+hugo_base_dir: ../
+#+hugo_section: ./posts
+
+#+hugo_weight: auto
+#+hugo_auto_set_lastmod: t
+
+#+author: Billy Lam
+
+* devops                                            :@devops:devops:workflow:
+
+** TODO Git Practice for Small Teams                                   :git:
+:PROPERTIES:
+:EXPORT_FILE_NAME: git-practice-for-small-teams
+:EXPORT_DATE: 2021-07-25
+:EXPORT_HUGO_MENU: :menu "main"
+:EXPORT_HUGO_WEIGHT: 20
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :nolastmod true :cover https://storage.googleapis.com/billylkc-blog-image/images/posts/15-git-practice/thumbnails.jpg
+:DESCRIPTION: Git practice for small teams
+:EXPORT_TITLE: Git Practice For Small Teams
+:SUMMARY: Git practice for small teams
+:END:
+
+
+*** Final thoughts
+
+Happy Coding!
+
+-
+Referenece
+- Photo by [Yancy Min](https://unsplash.com/@yancymin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/@yancymin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

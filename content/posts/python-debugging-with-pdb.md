@@ -2,7 +2,7 @@
 title = "Definitive guide to python debugging with pdb and Visual Studio Code"
 author = ["Billy Lam"]
 date = 2021-07-12
-lastmod = 2021-07-13
+lastmod = 2021-07-18
 tags = ["python", "workflow"]
 categories = ["python"]
 draft = true

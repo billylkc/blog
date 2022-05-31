@@ -1,10 +1,10 @@
 baseURL = "http://billylkc.com"
 languageCode = "en-us"
-title = "Another Data Science Blog"
-description = "Another Data Science Blog"
+title = "Fullstack Data Science Blog"
+description = "Fullstack Data Science Blog"
 theme = "dream"
 defaultContentLanguage = "en"
-headerTitle = "Another Data Science Blog"
+headerTitle = "Fullstack Data Science Blog"
 googleAnalytics = "260697059"
 paginate = 14
 
@@ -28,13 +28,14 @@ paginate = 14
   AuthorName = "Billy Lam"
   GitHubUser = "billylkc"
   Subtitle = "The dark side of Data Science"
-  headerTitle = "Another Data Science Blog"
+  headerTitle = "Fullstack Data Science Blog"
   motto = "The dark side of Data Science"
   email = "billy.lamkc@gmail.com"
   twitter = "billylkc"
   linkedin = "billylkc"
   github = "billylkc"
   siteStartYear = 2021
+  favicon = "img/favicon.png"
 
   highlightjs = false
   highlightjsCDN = "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"

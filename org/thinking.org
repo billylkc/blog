@@ -304,7 +304,7 @@ Reference: https://www.askpython.com/python/examples/count-objects-in-an-image
 - linear regression
 - svd
 
-** I quant HK
+** TODO I quant HK
 age group
 https://ourworldindata.org/grapher/historic-and-un-pop-projections-by-age?country=~HKG
 
